@@ -1,10 +1,10 @@
 1. Make sure you have Node.js (Optional if you all ready have)
    a. Run terminal command: node --version
-      You need greater then 0.10 to run. I am using v6.9.1
-   b. To update or install go to https://nodejs.org/en/,
-      Click the "v6.10.0 LTS Recommended For Most Users" button to download.
-      Open downloaded package and run the installer.
-
+      You need greater then 8.3 to run. I am using v12.16.2
+   b. To update or install run terminal command: sudo yum install -y nodejs
+       1. If you have an older version of nodejs installed, you'll have to remove it first
+          To remove, run terminal command: sudo yum remove -y nodejs npm
+        
 2. Install globally Grunt-Sass (Optional if you all ready have)
     a. Run terminal command: npm install -g grunt-cli
     b. You can check the version install with terminal command: grunt --version
