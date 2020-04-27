@@ -181,6 +181,7 @@ header ul#header-contact-links li a.contact-chat-icon:before {
 }
 
 .welcome-message a {
+  color: #555;
   margin-left: auto;
   padding: 0 16px;
 }

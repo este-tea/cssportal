@@ -76,51 +76,34 @@ header {
       }
     }
   }
-
   .tds-searchbar {
     margin-left: auto;
-
     .tds-search-container {
-      padding: 0;
-      position: relative;
-      border: 0;
-
-      .tds-searchbar-input {
-        -webkit-appearance: none;
-        -webkit-border-radius: 0;
-        border: 0 none;
-        outline: 0;
-        color: #555;
-        background: #e8ebf3;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 40px;
-        height: 40px;
-        width: 280px;
-        margin-right: 44px;
-        padding: 0 14px;
-      }
-
+      border: 1px solid #bbb;
       .tds-searchbar-button {
-        -webkit-appearance: none;
-        -webkit-border-radius: 0;
-        border: 0 none;
-        background-color: #19388a;
-        width: 44px;
-        float: left;
-        padding: 0;
-        text-align: center;
-        height: 44px;
-        cursor: pointer;
-        background-image: linear-gradient(transparent,transparent),url(../images/icon_search-white.svg);
-        background-size: 18px 18px;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: absolute;
-        right: 0;
-        top: 0;
-        text-indent: -9999em;
+        background-color: #f70;
+        height: 40px;
       }
     }
+  }
+}
+.welcome-message {
+  border-bottom: solid 2px #f70;
+}
+footer {
+  background: #518EAA url(../images/bg-footer-residential.jpg) no-repeat scroll center bottom;
+  background-size: cover;
+  border-top: 3px solid rgba(0, 0, 0, 0.2);
+  padding: 40px 0;
+  .footer-links {
+    li {
+      a {
+        border-right: solid 1px #fff;
+        color: #fff;
+      }
+    }
+  }
+  .copyright {
+    color: #fff;
   }
 }
