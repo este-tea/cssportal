@@ -1,12 +1,245 @@
+/* TDS STYLES
+------------------------------------------*/
+/* variables.scss
+==========================================*/
+.tds-orange {
+  color: #f37d1d;
+}
+
+.tds-blue {
+  color: #19388a;
+}
+
+.tds-lt-blue {
+  color: #0c8fd0;
+}
+
+.tds-green {
+  color: #7bb227;
+}
+
+/* END variables.scss */
+/* fonts.scss
+==========================================*/
+@font-face {
+  font-family: 'tex_gyre_adventorregular';
+  src: url("texgyreadventor-regular-webfont.eot");
+  src: url("texgyreadventor-regular-webfont.eot?#iefix") format("embedded-opentype"), url("texgyreadventor-regular-webfont.woff2") format("woff2"), url("texgyreadventor-regular-webfont.woff") format("woff"), url("texgyreadventor-regular-webfont.ttf") format("truetype"), url("texgyreadventor-regular-webfont.svg#tex_gyre_adventorregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tex_gyre_adventoritalic';
+  src: url("texgyreadventor-italic-webfont.eot");
+  src: url("texgyreadventor-italic-webfont.eot?#iefix") format("embedded-opentype"), url("texgyreadventor-italic-webfont.woff2") format("woff2"), url("texgyreadventor-italic-webfont.woff") format("woff"), url("texgyreadventor-italic-webfont.ttf") format("truetype"), url("texgyreadventor-italic-webfont.svg#tex_gyre_adventoritalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'tex_gyre_adventorbold';
+  src: url("texgyreadventor-bold-webfont.eot");
+  src: url("texgyreadventor-bold-webfont.eot?#iefix") format("embedded-opentype"), url("texgyreadventor-bold-webfont.woff2") format("woff2"), url("texgyreadventor-bold-webfont.woff") format("woff"), url("texgyreadventor-bold-webfont.ttf") format("truetype"), url("texgyreadventor-bold-webfont.svg#tex_gyre_adventorbold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tex_gyre_adventorbold_italic';
+  src: url("texgyreadventor-bolditalic-webfont.eot");
+  src: url("texgyreadventor-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("texgyreadventor-bolditalic-webfont.woff2") format("woff2"), url("texgyreadventor-bolditalic-webfont.woff") format("woff"), url("texgyreadventor-bolditalic-webfont.ttf") format("truetype"), url("texgyreadventor-bolditalic-webfont.svg#tex_gyre_adventorbold_italic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* END fonts.scss */
+/* layout
+==========================================*/
 .tds-width-container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
   width: 100%;
   max-width: 1200px;
 }
 
+/* END variables.scss */
+/* alerts
+==========================================*/
+.tds-alert {
+  margin-bottom: 20px;
+  display: block;
+  text-align: left;
+  padding: 12px 16px;
+  width: 100%;
+  line-height: 24px;
+  font-family: "ITC Avant Garde Gothic W01", "Century Gothic", Arial, serif;
+  font-size: 14px;
+  font-weight: 400 !important;
+  color: #000;
+  border-radius: 0px;
+  border: 0px solid transparent;
+}
+
+.tds-alert p {
+  font-family: "ITC Avant Garde Gothic W01", "Century Gothic", Arial, serif;
+  margin-bottom: 0;
+  color: black;
+}
+
+.tds-alert p.h4 {
+  color: #000;
+  margin-top: 2px;
+}
+
+.tds-alert a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.tds-alert a:focus {
+  background: #555;
+  color: white;
+  padding: 0 8px;
+}
+
+.tds-alert a:hover {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tds-alert ul {
+  display: block;
+  margin: 10px 10px 0 10px;
+  padding-left: 12px;
+  list-style-type: none;
+}
+
+.tds-alert ul li {
+  display: list-item;
+  color: #000 !important;
+  line-height: 1.4em !important;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.tds-alert ul li:before {
+  position: relative;
+  top: -3px;
+  margin-right: 12px;
+  margin-left: -20px;
+  font-size: 8px;
+  color: #000;
+  transform: translate(0, 0);
+}
+
+.tds-alert ul li:last-child {
+  margin-bottom: 0;
+}
+
+.userGreeting {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.userGreeting .tds-width-container {
+  padding: 0;
+}
+
+.userGreeting .tds-alert-greeting {
+  background-color: #E8EBF3;
+  margin-top: 16px;
+  padding: 14px;
+}
+
+.tds-alert-error {
+  background-color: #ffecec;
+  border-left: 3px solid #CB1D1D;
+}
+
+.tds-alert-error.tds-top-border {
+  border-top: 3px solid #CB1D1D;
+  border-left: 0px;
+}
+
+.tds-alert.tds-alert-error {
+  background-image: url("/content/dam/tdstelecom/images/ui/alerts/icon_alert-error.svg");
+  background-size: 20px;
+  background-position: 16px 14px;
+  background-repeat: no-repeat;
+  padding-left: 52px;
+}
+
+.tds-alert-warning {
+  background-color: #FFF8D8;
+  border-left: 3px solid #FFCE00;
+}
+
+.tds-alert-warning.tds-top-border {
+  border-top: 3px solid #FFCE00;
+  border-left: 0px;
+}
+
+.tds-alert.tds-alert-warning {
+  background-image: url("/content/dam/tdstelecom/images/ui/alerts/icon_alert-warning.svg");
+  background-size: 22px;
+  background-position: 16px 16px;
+  background-repeat: no-repeat;
+  padding-left: 52px;
+}
+
+.tds-alert-success {
+  background-color: #E5F0D4;
+  border-left: 3px solid #6B9C22;
+}
+
+.tds-alert-success.tds-top-border {
+  border-top: 3px solid #6B9C22;
+  border-left: 0px;
+}
+
+.tds-alert.tds-alert-success {
+  background-image: url("/content/dam/tdstelecom/images/ui/alerts/icon_alert-success.svg");
+  background-size: 22px;
+  background-position: 16px 11px;
+  background-repeat: no-repeat;
+  padding-left: 52px;
+}
+
+.tds-alert-loading,
+.tds-alert-info,
+.tds-alert-status {
+  color: black;
+  background: #d6efff;
+  border-left: solid 3px #25ACF2;
+}
+
+.tds-alert.tds-alert-info,
+.tds-alert.tds-alert-status {
+  background-image: url("/content/dam/tdstelecom/images/ui/alerts/icon_alert-information.svg");
+  background-size: 20px;
+  background-position: 16px 11px;
+  background-repeat: no-repeat;
+  padding-left: 52px;
+}
+
+.tds-alert.tds-alert-info,
+.tds-alert.tds-alert-status {
+  background-size: 20px;
+  background-position: 16px 14px;
+  padding-left: 52px;
+}
+
+.tds-alert.tds-alert-loading {
+  padding-left: 52px;
+  background-image: url("/content/dam/tdstelecom/images/ui/tds-spinner-icon.gif");
+  background-size: 22px;
+  background-position: 16px 11px;
+  background-repeat: no-repeat;
+}
+
+/* END alerts.scss */
+/* header.scss
+==========================================*/
 header div {
   display: flex;
 }
@@ -48,7 +281,7 @@ header ul#header-contact-links li a.contact-links-text {
 }
 
 header ul#header-contact-links li a.contact-links-text:hover {
-  color: #19388a;
+  color: #19388A;
 }
 
 header ul#header-contact-links li a.contact-links-text:before {
@@ -59,7 +292,7 @@ header ul#header-contact-links li a.contact-links-text:before {
   margin-right: .5em;
   top: -2px;
   position: relative;
-  background-color: #25acf2;
+  background-color: #25ACF2;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 12px;
@@ -67,7 +300,7 @@ header ul#header-contact-links li a.contact-links-text:before {
 }
 
 header ul#header-contact-links li a.contact-links-text:hover:before {
-  background-color: #19388a;
+  background-color: #19388A;
 }
 
 header ul#header-contact-links li a.contact-call-icon:before {
@@ -79,7 +312,7 @@ header ul#header-contact-links li a.contact-chat-icon:before {
 }
 
 .L0-nav {
-  border-bottom: solid 4px #19388a;
+  border-bottom: solid 4px #19388A;
   margin-bottom: 0;
   display: flex;
   flex-direction: row;
@@ -90,12 +323,12 @@ header ul#header-contact-links li a.contact-chat-icon:before {
   margin: 0;
   list-style-type: none;
   padding: 0;
-  font-family: "ITC Avant Garde Gothic W01",Century Gothic,Arial;
+  font-family: "ITC Avant Garde Gothic W01", "Century Gothic", Arial, serif;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
   line-height: 40px;
-  color: #19388a;
+  color: #19388A;
   display: flex;
 }
 
@@ -107,19 +340,19 @@ header ul#header-contact-links li a.contact-chat-icon:before {
   display: inline-block;
   height: 40px;
   padding: 0 16px;
-  color: #19388a;
+  color: #19388A;
   text-decoration: none;
 }
 
 .L0-nav ul li a:hover {
   color: #fff;
-  background-color: #4760a1;
+  background-color: #4760A1;
   cursor: pointer;
 }
 
 .L0-nav ul li.active a {
   color: #fff;
-  background-color: #19388a;
+  background-color: #19388A;
 }
 
 .L0-nav .tds-searchbar {
@@ -137,8 +370,8 @@ header ul#header-contact-links li a.contact-chat-icon:before {
   -webkit-border-radius: 0;
   border: 0 none;
   outline: 0;
-  color: #555;
-  background: #e8ebf3;
+  color: #555555;
+  background: #D9D9D9;
   font-weight: 400;
   font-style: normal;
   line-height: 40px;
@@ -152,7 +385,7 @@ header ul#header-contact-links li a.contact-chat-icon:before {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   border: 0 none;
-  background-color: #19388a;
+  background-color: #19388A;
   width: 44px;
   float: left;
   padding: 0;
@@ -169,23 +402,9 @@ header ul#header-contact-links li a.contact-chat-icon:before {
   text-indent: -9999em;
 }
 
-.welcome-message {
-  border-bottom: solid 2px #0c8fd0;
-  display: flex;
-  flex-direction: row;
-  line-height: 40px;
-}
-
-.welcome-message p {
-  margin: 0;
-}
-
-.welcome-message a {
-  color: #555;
-  margin-left: auto;
-  padding: 0 16px;
-}
-
+/* END header.scss */
+/* footer.scss
+==========================================*/
 footer {
   background-color: #555555;
   text-align: center;
@@ -213,7 +432,7 @@ footer .footer-links {
 
 footer .footer-links li {
   display: inline;
-  font-family: "Neue Helvetica W01", Helvetica Neue, Helvetica, Arial;
+  font-family: "Neue Helvetica W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75em;
@@ -237,3 +456,5 @@ footer .copyright {
   line-height: 1.5em;
   color: #cacaca;
 }
+
+/* END footer.scss */

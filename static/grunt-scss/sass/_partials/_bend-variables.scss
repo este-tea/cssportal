@@ -1,0 +1,126 @@
+/* bend-variables.scss
+==========================================*/
+
+// TOC
+// ====================================
+// BRAND COLOR PALETTE
+// OTHER UI COLORS
+// ALERT/STATUS MESSAGES
+// TYPOGRAPHY
+// MOBILE BREAKPOINTS GLOBAL OVERRIDES
+
+
+// BRAND COLOR PALETTE
+// ====================================
+$bend-orange: #f70;
+$bend-green: #8dc73f;
+$bend-dk-green: #5cb85c;
+$bend-yellow: #fc0;
+$bend-lt-blue: #64bfd3;
+$bend-dk-blue: #1c76b4;
+$bend-red: #FF4D50;
+$bend-gray: #585852;
+
+$bend-orange-80: lighten($bend-orange, 10); //aka #ff9233
+$bend-ltr-gray: lighten($bend-gray, 60);
+$bend-lt-gray: lighten($bend-gray, 15); //aka #808077
+$bend-dk-gray: darken($bend-gray, 15); //aka #30302d
+
+.brand-primary {
+    color: $bend-orange;
+}
+.brand-primary a {
+    color: $bend-orange;
+}
+.brand-secondary {
+    color: $bend-lt-blue;
+}
+.brand-secondary a {
+    color: $bend-lt-blue;
+}
+.brand-tertiary {
+    color: $bend-green;
+}
+.brand-tertiary a {
+    color: $bend-green;
+}
+.brand-quartenary {
+    color: $bend-yellow;
+}
+.brand-quartenary a {
+    color: $bend-yellow;
+}
+.brand-quincenary {
+    color: $bend-dk-blue;
+}
+.brand-quincenary a {
+    color: $bend-dk-blue;
+}
+
+// OTHER UI COLORS
+// ====================================
+// body text color
+$text-color: $bend-gray;
+// radius reset
+$border-radius-base: 0 !important;
+// xrms box shadow setting
+$box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
+//** `.form-group` margin
+$form-group-margin-bottom: 20px;
+
+// ALERT/STATUS MESSAGES
+// ====================================---
+// *informational
+$tds-info-bg: lighten($bend-lt-blue, 30);
+
+// *loading or status
+$tds-status: $bend-lt-blue;
+$tds-status-bg: #d6efff;
+
+// *warning yellow
+$tds-warning: #FFCE00;
+$tds-warning-bg: #FFF8D8;
+
+// *error red
+$tds-error: #CB1D1D;
+$tds-critical-bg: #ffecec;
+
+// *success green
+$tds-success: $bend-green;
+$tds-success-bg: #E5F0D4;
+
+// TYPOGRAPHY
+// ====================================
+
+// font families
+$bend-font-headings: "Museo W01", Museo, Georgia, "Times New Roman", Times, serif;
+$bend-font-body: "Museo Sans W01", Museo Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+$tds-font-family: $bend-font-headings;
+$tds-font-body: $bend-font-body;
+
+
+// MOBILE BREAKPOINTS GLOBAL OVERRIDES
+// ====================================
+
+// Replaces variable references in the bootstrap scss
+$screen-xxxs: 320px;
+$screen-xxxs-min: $screen-xxxs;
+$screen-xxs: 400px;
+$screen-xxs-min: $screen-xxs;
+$screen-xs: 584px;
+$screen-xs-min: $screen-xs;
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxxs-max: ($screen-xxs-min - 1);
+$screen-xxs-max:  ($screen-xs-min - 1);
+$screen-xs-max:   ($screen-sm-min - 1);
+$screen-sm-max:   ($screen-md-min - 1);
+$screen-md-max:   ($screen-lg-min - 1);
+
+/* END bend-variables.scss */

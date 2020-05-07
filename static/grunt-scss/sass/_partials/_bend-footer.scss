@@ -1,0 +1,20 @@
+/* bend-footer.scss
+==========================================*/
+footer {
+  background: #518EAA url(../images/bg-footer-residential.jpg) no-repeat scroll center bottom;
+  background-size: cover;
+  border-top: 3px solid rgba(0, 0, 0, 0.2);
+  padding: 40px 0;
+  .footer-links {
+    li {
+      a {
+        border-right: solid 1px #fff;
+        color: #fff;
+      }
+    }
+  }
+  .copyright {
+    color: #fff;
+  }
+}
+/* END bend-footer.scss */

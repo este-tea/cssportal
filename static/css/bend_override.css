@@ -1,3 +1,253 @@
+/* BEND STYLES
+------------------------------------------*/
+/* variables.scss
+==========================================*/
+.tds-orange {
+  color: #f37d1d;
+}
+
+.tds-blue {
+  color: #19388a;
+}
+
+.tds-lt-blue {
+  color: #0c8fd0;
+}
+
+.tds-green {
+  color: #7bb227;
+}
+
+/* END variables.scss */
+/* bend-variables.scss
+==========================================*/
+.brand-primary {
+  color: #f70;
+}
+
+.brand-primary a {
+  color: #f70;
+}
+
+.brand-secondary {
+  color: #64bfd3;
+}
+
+.brand-secondary a {
+  color: #64bfd3;
+}
+
+.brand-tertiary {
+  color: #8dc73f;
+}
+
+.brand-tertiary a {
+  color: #8dc73f;
+}
+
+.brand-quartenary {
+  color: #fc0;
+}
+
+.brand-quartenary a {
+  color: #fc0;
+}
+
+.brand-quincenary {
+  color: #1c76b4;
+}
+
+.brand-quincenary a {
+  color: #1c76b4;
+}
+
+/* END bend-variables.scss */
+/* bend-fonts.scss
+==========================================*/
+/* END bend-fonts.scss */
+/* bend-errors-alerts
+==========================================*/
+.alert,
+.tds-alert,
+.tds-error-msg {
+  font-family: "Museo Sans W01", Museo Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.alert > p:first-child,
+.tds-alert > p:first-child,
+.tds-error-msg > p:first-child {
+  margin-top: 0;
+}
+
+.alert p,
+.tds-alert p,
+.tds-error-msg p {
+  font-family: "Museo Sans W01", Museo Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-top: 2px;
+}
+
+.alert a:focus, .alert a:hover,
+.tds-alert a:focus,
+.tds-alert a:hover,
+.tds-error-msg a:focus,
+.tds-error-msg a:hover {
+  text-decoration: none;
+}
+
+.alert .h4,
+.tds-alert .h4,
+.tds-error-msg .h4 {
+  margin-bottom: 8px;
+}
+
+.alert .h4 .bold,
+.tds-alert .h4 .bold,
+.tds-error-msg .h4 .bold {
+  font-weight: 700;
+}
+
+.alert ul.alert-list,
+.alert ul.errorText,
+.tds-alert ul.alert-list,
+.tds-alert ul.errorText,
+.tds-error-msg ul.alert-list,
+.tds-error-msg ul.errorText {
+  margin-left: 12px;
+}
+
+.alert ul.alert-list li,
+.alert ul.errorText li,
+.tds-alert ul.alert-list li,
+.tds-alert ul.errorText li,
+.tds-error-msg ul.alert-list li,
+.tds-error-msg ul.errorText li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8em !important;
+}
+
+.alert ul.alert-list li:before,
+.alert ul.errorText li:before,
+.tds-alert ul.alert-list li:before,
+.tds-alert ul.errorText li:before,
+.tds-error-msg ul.alert-list li:before,
+.tds-error-msg ul.errorText li:before {
+  width: 8px;
+  height: 8px;
+  margin-top: 8px;
+  content: "";
+  position: relative;
+  top: 0;
+  display: block;
+  float: left;
+  margin-left: -12px;
+}
+
+.alert,
+.tds-alert,
+.tds-error-msg {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 1em 0;
+  padding: 14px 14px 14px 2.75em;
+  background-size: 1.25em 1.25em;
+  background-repeat: no-repeat;
+  background-position: 14px 14px;
+  border-radius: 4px;
+}
+
+.alert-success .tds-error-success,
+.tds-alert.tds-alert-success {
+  padding-left: 46px;
+  background-color: #8dc73f;
+  background-image: url("/content/dam/bendbroadband/images/ui/icon_alert-success-bend.svg");
+}
+
+.alert-danger,
+.tds-alert.tds-alert-critical,
+.tds-error-critical {
+  padding-left: 46px;
+  background-color: #FF4D50;
+  background-image: url("/content/dam/bendbroadband/images/ui/icon_alert-error-bend.svg");
+}
+
+.alert-info,
+.alert-loading,
+.tds-alert.tds-alert-info,
+.tds-alert.tds-alert-loading,
+.tds-error-info {
+  padding-left: 46px;
+  background-color: #64bfd3;
+}
+
+.alert-info a:hover, .alert-info a:focus,
+.alert-loading a:hover,
+.alert-loading a:focus,
+.tds-alert.tds-alert-info a:hover,
+.tds-alert.tds-alert-info a:focus,
+.tds-alert.tds-alert-loading a:hover,
+.tds-alert.tds-alert-loading a:focus,
+.tds-error-info a:hover,
+.tds-error-info a:focus {
+  color: #64bfd3;
+}
+
+.alert-info,
+.tds-alert.tds-alert-info,
+.tds-error-info {
+  background-image: url("/content/dam/bendbroadband/images/ui/icon_alert-information-bend.svg");
+}
+
+.alert-loading,
+.tds-alert.tds-alert-loading {
+  padding-left: 46px;
+  background-image: url("/content/dam/bendbroadband/images/ui/loading-icon.gif");
+}
+
+.alert-warning,
+.tds-alert.tds-alert-warning,
+.tds-error-warning {
+  padding-left: 46px;
+  color: #30302d;
+  background-color: #fc0;
+  background-image: url("/content/dam/bendbroadband/images/ui/icon_alert-warning-bend.svg");
+  background-position: 16px 20px;
+}
+
+.alert-warning p,
+.tds-alert.tds-alert-warning p,
+.tds-error-warning p {
+  color: #30302d;
+}
+
+.alert-warning a,
+.tds-alert.tds-alert-warning a,
+.tds-error-warning a {
+  color: black;
+}
+
+.alert-warning a:hover,
+.tds-alert.tds-alert-warning a:hover,
+.tds-error-warning a:hover {
+  background: #30302d;
+}
+
+.userGreeting {
+  max-width: 100%;
+}
+
+.userGreeting .tds-alert-greeting {
+  background-color: #d4e5ed;
+  margin: 0;
+  border-radius: 0;
+  padding: 14px;
+}
+
+/* bend-header.scss
+==========================================*/
 header {
   background: url(../images/checkers-light.gif) left top repeat;
   border-bottom: solid 3px rgba(0, 0, 0, 0.25);
@@ -97,6 +347,9 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
   border-bottom: solid 2px #f70;
 }
 
+/* END bend-header.scss */
+/* bend-footer.scss
+==========================================*/
 footer {
   background: #518EAA url(../images/bg-footer-residential.jpg) no-repeat scroll center bottom;
   background-size: cover;
@@ -112,3 +365,5 @@ footer .footer-links li a {
 footer .copyright {
   color: #fff;
 }
+
+/* END bend-footer.scss */

@@ -4,9 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../static/css/portal_style.css">
     <link title="bendStyle" rel="stylesheet" href="../static/css/bend_override.css">
     <title>CSSPortal</title>
@@ -43,6 +41,8 @@
             </li>
           </ul>
 
+          <!-- // START searchbar: waiting to see if there's room to work this in
+
           <form class="tds-searchbar" action="/Search.html" method="get">
             <fieldset class="tds-search-container">
               <label for="tdsheader--navbar--topSearch" class="search-label sr-only">Search the site:</label>
@@ -51,15 +51,17 @@
             </fieldset>
           </form>
 
+          END searchbar //-->
+
         </nav>
       </div>
     </header>
 
-    <div class="tds-width-container">
-
-      <div class="welcome-message">
-        <p>You are logged in as <b>exampleuser1234@tds.net</b>. Your location is <b>Madison WI</b></p>
-        <a href="#">Log Out</a>
+    <div class="userGreeting">
+      <div class="tds-alert tds-alert-greeting">
+        <div class="tds-width-container">
+          <p>You are logged in as <b>exampleuser1234@tds.net</b>. Your location is <b>Madison, WI</b>. <a href="#">Log Out</a></p>
+        </div>
       </div>
     </div>
 
