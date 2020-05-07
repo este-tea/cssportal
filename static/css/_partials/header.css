@@ -1,0 +1,187 @@
+.tds-width-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+header div {
+  display: flex;
+}
+
+header a#tds-logo {
+  width: 98px;
+  height: 40px;
+  display: inline-block;
+  margin: 40px 0;
+  background-image: url(../images/tds-logo.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header ul#header-contact-links {
+  margin: 40px 0;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 481px) {
+  header ul#header-contact-links {
+    margin-left: auto;
+  }
+}
+
+header ul#header-contact-links li {
+  display: inline-block;
+  margin: 0 .8em;
+  padding: 0;
+}
+
+header ul#header-contact-links li a.contact-links-text {
+  display: flex;
+  text-decoration: none;
+  color: #555;
+}
+
+header ul#header-contact-links li a.contact-links-text:hover {
+  color: #19388a;
+}
+
+header ul#header-contact-links li a.contact-links-text:before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  display: block;
+  margin-right: .5em;
+  top: -2px;
+  position: relative;
+  background-color: #25acf2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  border-radius: 50%;
+}
+
+header ul#header-contact-links li a.contact-links-text:hover:before {
+  background-color: #19388a;
+}
+
+header ul#header-contact-links li a.contact-call-icon:before {
+  background-image: url(../images/icon_contact-call.svg);
+}
+
+header ul#header-contact-links li a.contact-chat-icon:before {
+  background-image: url(../images/icon_contact-chat.svg);
+}
+
+.L0-nav {
+  border-bottom: solid 4px #19388a;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.L0-nav ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  font-family: "ITC Avant Garde Gothic W01",Century Gothic,Arial;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 40px;
+  color: #19388a;
+  display: flex;
+}
+
+.L0-nav ul li {
+  display: inline-block;
+}
+
+.L0-nav ul li a {
+  display: inline-block;
+  height: 40px;
+  padding: 0 16px;
+  color: #19388a;
+  text-decoration: none;
+}
+
+.L0-nav ul li a:hover {
+  color: #fff;
+  background-color: #4760a1;
+  cursor: pointer;
+}
+
+.L0-nav ul li.active a {
+  color: #fff;
+  background-color: #19388a;
+}
+
+.L0-nav .tds-searchbar {
+  margin-left: auto;
+}
+
+.L0-nav .tds-searchbar .tds-search-container {
+  padding: 0;
+  position: relative;
+  border: 0;
+}
+
+.L0-nav .tds-searchbar .tds-search-container .tds-searchbar-input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border: 0 none;
+  outline: 0;
+  color: #555;
+  background: #e8ebf3;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 40px;
+  height: 40px;
+  width: 280px;
+  margin-right: 44px;
+  padding: 0 14px;
+}
+
+.L0-nav .tds-searchbar .tds-search-container .tds-searchbar-button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border: 0 none;
+  background-color: #19388a;
+  width: 44px;
+  float: left;
+  padding: 0;
+  text-align: center;
+  height: 44px;
+  cursor: pointer;
+  background-image: linear-gradient(transparent, transparent), url(../images/icon_search-white.svg);
+  background-size: 18px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-indent: -9999em;
+}
+
+.welcome-message {
+  border-bottom: solid 2px #0c8fd0;
+  display: flex;
+  flex-direction: row;
+  line-height: 40px;
+}
+
+.welcome-message p {
+  margin: 0;
+}
+
+.welcome-message a {
+  color: #555;
+  margin-left: auto;
+  padding: 0 16px;
+}
