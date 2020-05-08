@@ -686,6 +686,46 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
   height: 40px;
 }
 
+@media (max-width: 992px) {
+  header a#tds-logo {
+    width: 300px;
+    height: 36px;
+    background-image: url(../images/logo-bend-vertical.svg);
+    background-position: left;
+  }
+  #menuButton:hover {
+    border: solid 2px #F37D1D;
+    background-color: #F37D1D;
+  }
+  .L0-nav ul li {
+    background: #777777 url(../images/checkers-dark.gif) left top repeat;
+  }
+  .L0-nav ul li a {
+    color: #FFFFFF;
+    background: #777777 url(../images/checkers-dark.gif) left top repeat;
+    border-bottom: 2px solid #F37D1D;
+    padding: 10px 0;
+  }
+  .L0-nav ul li a:hover {
+    background-color: #555555;
+  }
+  .L0-nav ul li a:hover:before {
+    border: none !important;
+  }
+  .L0-nav ul li.active a {
+    background-color: #777777;
+  }
+  .L0-nav ul li.active a:hover {
+    background-color: #555555;
+  }
+  .L0-nav ul li.active a:before {
+    border: none !important;
+  }
+  .L0-nav ul li:hover {
+    background-color: #555555;
+  }
+}
+
 /* END bend-header.scss */
 /* bend-footer.scss
 ==========================================*/
@@ -707,6 +747,18 @@ footer .footer-links li {
 footer .footer-links li a {
   border-right: solid 1px #fff;
   color: #fff;
+}
+
+@media (max-width: 400px) {
+  footer .footer-links li a {
+    display: block;
+    padding: 16px;
+    border-right: none;
+    border-bottom: solid 1px #cacaca;
+  }
+  footer .footer-links li:first-of-type a {
+    border-top: solid 1px #cacaca;
+  }
 }
 
 footer .copyright {

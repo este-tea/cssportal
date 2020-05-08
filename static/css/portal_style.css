@@ -63,6 +63,12 @@
   padding: 0 16px;
 }
 
+@media (max-width: 993px) {
+  .tds-width-container {
+    padding: 0;
+  }
+}
+
 /* END layout.scss */
 /* typography.scss
 ==========================================*/
@@ -368,11 +374,16 @@ header div {
   display: flex;
 }
 
+header #menuButton {
+  display: none;
+}
+
 header a#tds-logo {
   width: 98px;
   height: 40px;
   display: inline-block;
   margin: 40px 0;
+  margin-left: 20px;
   background-image: url(../images/tds-logo.svg);
   background-size: contain;
   background-position: center;
@@ -527,6 +538,66 @@ header ul#header-contact-links li a.contact-chat-icon:before {
   text-indent: -9999em;
 }
 
+@media (max-width: 993px) {
+  #menuButton {
+    border: solid 2px #CCCCCC;
+    background-color: transparent;
+    color: #555555;
+    padding: 8px !important;
+    height: 36px;
+    display: inline-block !important;
+    margin-left: auto;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 40px;
+    margin-right: 20px;
+  }
+  #menuButton:hover {
+    border: solid 2px #19388A;
+    color: #FFFFFF !important;
+    background-color: #19388A;
+  }
+  .L0-nav {
+    background-color: #353535;
+    border-bottom: none;
+  }
+  .L0-nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .L0-nav ul li {
+    display: block;
+    width: 100%;
+  }
+  .L0-nav ul li a {
+    color: #FFFFFF;
+    font-weight: 300;
+    display: block;
+    height: auto;
+    padding: 10px 0;
+    margin: 0 15px;
+    border-bottom: 2px solid #0C8FD0;
+  }
+  .L0-nav ul li a:hover {
+    color: #FFFFFF;
+    background-color: #555555;
+    cursor: pointer;
+  }
+  .L0-nav ul li.active a {
+    color: #FFFFFF;
+    background-color: #353535;
+  }
+  .L0-nav ul li.active a:hover {
+    background-color: #555555;
+  }
+  .L0-nav ul li:hover {
+    background-color: #555555;
+  }
+  #header-contact-links {
+    display: none !important;
+  }
+}
+
 /* END header.scss */
 /* footer.scss
 ==========================================*/
@@ -549,7 +620,7 @@ footer .phone a {
 }
 
 footer .footer-links {
-  margin-bottom: 20px;
+  margin: 0 20px;
   list-style: none;
   padding: 0;
   text-align: center;
@@ -570,16 +641,30 @@ footer .footer-links li a {
   padding: 4px 16px;
   border-right: solid 1px #cacaca;
   color: #cacaca;
+  text-decoration: none;
 }
 
 footer .footer-links li:last-child a {
   border-right: none;
 }
 
+@media (max-width: 400px) {
+  footer .footer-links li {
+    display: block;
+  }
+  footer .footer-links li a {
+    display: block;
+    padding: 16px;
+    border-right: none;
+    border-bottom: solid 1px #cacaca;
+  }
+}
+
 footer .copyright {
   font-size: 0.75em;
   line-height: 1.5em;
   color: #cacaca;
+  padding: 15px;
 }
 
 /* END footer.scss */

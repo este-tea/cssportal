@@ -6,11 +6,16 @@ header {
     display: flex;
   }
 
+  #menuButton {
+    display: none;
+  }
+
   a#tds-logo {
     width: 98px;
     height: 40px;
     display: inline-block;
     margin: 40px 0;
+    margin-left: 20px;
     background-image: url(../images/tds-logo.svg);
     background-size: contain;
     background-position: center;
@@ -157,6 +162,70 @@ header {
         text-indent: -9999em;
       }
     }
+  }
+}
+
+@media (max-width:$screen-md) {
+
+  #menuButton {
+    border: solid 2px $tds-gray;
+    background-color: transparent;
+    color: $tds-dk-gray;
+    padding: 8px !important;
+    height: 36px;
+    display: inline-block !important;
+    margin-left: auto;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 40px;
+    margin-right: 20px;
+  }
+  #menuButton:hover {
+    border: solid 2px $tds-dk-blue;
+    color: $tds-white !important;
+    background-color: $tds-dk-blue;
+  }
+
+  .L0-nav {
+    background-color: $tds-dkr-gray;
+    border-bottom: none;
+    ul {
+      flex-direction: column;
+      width: 100%;
+      li {
+        display: block;
+        width: 100%;
+        a {
+          color: $tds-white;
+          font-weight: 300;
+          display: block;
+          height: auto;
+          padding: 10px 0;
+          margin: 0 15px;
+          border-bottom: 2px solid $tds-lt-blue;
+        }
+        a:hover {
+          color: $tds-white;
+          background-color: $tds-dk-gray;
+          cursor: pointer;
+        }
+      }
+      li.active {
+        a {
+          color: $tds-white;
+          background-color: $tds-dkr-gray;
+        }
+        a:hover {
+          background-color: $tds-dk-gray;
+        }
+      }
+      li:hover {
+        background-color: $tds-dk-gray;
+      }
+    }
+  }
+  #header-contact-links {
+    display: none !important;
   }
 }
 

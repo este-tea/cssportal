@@ -7,4 +7,10 @@
   padding: 0 16px;
 }
 
+@media (max-width:$screen-md) {
+  .tds-width-container {
+    padding: 0;
+  }
+}
+
 /* END layout.scss */

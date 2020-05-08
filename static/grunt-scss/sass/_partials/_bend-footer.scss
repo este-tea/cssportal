@@ -14,6 +14,19 @@ footer {
         color: #fff;
       }
     }
+    @media (max-width:$screen-xxs) {
+        li {
+          a {
+            display: block;
+            padding: 16px;
+            border-right: none;
+            border-bottom: solid 1px $tds-headfoot-text-color;
+          }
+        }
+        li:first-of-type a {
+            border-top: solid 1px $tds-headfoot-text-color;
+        }
+    }
   }
   .copyright {
     color: #fff;

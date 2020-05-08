@@ -93,4 +93,54 @@ header {
   }
 }
 
+@media (max-width:$screen-md) {
+
+  header a#tds-logo {
+    width: 300px;
+    height: 36px;
+    background-image: url(../images/logo-bend-vertical.svg);
+    background-position: left;
+  }
+
+  #menuButton:hover {
+    border: solid 2px $tds-orange;
+    background-color: $tds-orange;
+  }
+  .L0-nav {
+
+    ul {
+
+      li {
+        background: $tds-dk-gray-80 url(../images/checkers-dark.gif) left top repeat;
+        a {
+          color: $tds-white;
+          background: $tds-dk-gray-80 url(../images/checkers-dark.gif) left top repeat;
+          border-bottom: 2px solid $tds-orange;
+          padding: 10px 0;
+        }
+        a:hover {
+          background-color: $tds-dk-gray;
+        }
+        a:hover:before {
+          border: none !important;
+        }
+      }
+      li.active {
+        a {
+          background-color: $tds-dk-gray-80;
+        }
+        a:hover {
+          background-color: $tds-dk-gray;
+        }
+        a:before {
+          border: none !important;
+        }
+      }
+      li:hover {
+        background-color: $tds-dk-gray;
+      }
+    }
+  }
+}
+
 /* END bend-header.scss */
