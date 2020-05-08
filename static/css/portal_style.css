@@ -23,32 +23,32 @@
 ==========================================*/
 @font-face {
   font-family: 'tex_gyre_adventorregular';
-  src: url("texgyreadventor-regular-webfont.eot");
-  src: url("texgyreadventor-regular-webfont.eot?#iefix") format("embedded-opentype"), url("texgyreadventor-regular-webfont.woff2") format("woff2"), url("texgyreadventor-regular-webfont.woff") format("woff"), url("texgyreadventor-regular-webfont.ttf") format("truetype"), url("texgyreadventor-regular-webfont.svg#tex_gyre_adventorregular") format("svg");
+  src: url("../fonts/tds-fonts/texgyreadventor-regular-webfont.eot");
+  src: url("../fonts/tds-fonts/texgyreadventor-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tds-fonts/texgyreadventor-regular-webfont.woff2") format("woff2"), url("../fonts/tds-fonts/texgyreadventor-regular-webfont.woff") format("woff"), url("../fonts/tds-fonts/texgyreadventor-regular-webfont.ttf") format("truetype"), url("../fonts/tds-fonts/texgyreadventor-regular-webfont.svg#tex_gyre_adventorregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'tex_gyre_adventoritalic';
-  src: url("texgyreadventor-italic-webfont.eot");
-  src: url("texgyreadventor-italic-webfont.eot?#iefix") format("embedded-opentype"), url("texgyreadventor-italic-webfont.woff2") format("woff2"), url("texgyreadventor-italic-webfont.woff") format("woff"), url("texgyreadventor-italic-webfont.ttf") format("truetype"), url("texgyreadventor-italic-webfont.svg#tex_gyre_adventoritalic") format("svg");
+  src: url("../fonts/tds-fonts/texgyreadventor-italic-webfont.eot");
+  src: url("../fonts/tds-fonts/texgyreadventor-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tds-fonts/texgyreadventor-italic-webfont.woff2") format("woff2"), url("../fonts/tds-fonts/texgyreadventor-italic-webfont.woff") format("woff"), url("../fonts/tds-fonts/texgyreadventor-italic-webfont.ttf") format("truetype"), url("../fonts/tds-fonts/texgyreadventor-italic-webfont.svg#tex_gyre_adventoritalic") format("svg");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'tex_gyre_adventorbold';
-  src: url("texgyreadventor-bold-webfont.eot");
-  src: url("texgyreadventor-bold-webfont.eot?#iefix") format("embedded-opentype"), url("texgyreadventor-bold-webfont.woff2") format("woff2"), url("texgyreadventor-bold-webfont.woff") format("woff"), url("texgyreadventor-bold-webfont.ttf") format("truetype"), url("texgyreadventor-bold-webfont.svg#tex_gyre_adventorbold") format("svg");
+  src: url("../fonts/tds-fonts/texgyreadventor-bold-webfont.eot");
+  src: url("../fonts/tds-fonts/texgyreadventor-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tds-fonts/texgyreadventor-bold-webfont.woff2") format("woff2"), url("../fonts/tds-fonts/texgyreadventor-bold-webfont.woff") format("woff"), url("../fonts/tds-fonts/texgyreadventor-bold-webfont.ttf") format("truetype"), url("../fonts/tds-fonts/texgyreadventor-bold-webfont.svg#tex_gyre_adventorbold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'tex_gyre_adventorbold_italic';
-  src: url("texgyreadventor-bolditalic-webfont.eot");
-  src: url("texgyreadventor-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("texgyreadventor-bolditalic-webfont.woff2") format("woff2"), url("texgyreadventor-bolditalic-webfont.woff") format("woff"), url("texgyreadventor-bolditalic-webfont.ttf") format("truetype"), url("texgyreadventor-bolditalic-webfont.svg#tex_gyre_adventorbold_italic") format("svg");
+  src: url("../fonts/tds-fonts/texgyreadventor-bolditalic-webfont.eot");
+  src: url("../fonts/tds-fonts/texgyreadventor-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tds-fonts/texgyreadventor-bolditalic-webfont.woff2") format("woff2"), url("../fonts/tds-fonts/texgyreadventor-bolditalic-webfont.woff") format("woff"), url("../fonts/tds-fonts/texgyreadventor-bolditalic-webfont.ttf") format("truetype"), url("../fonts/tds-fonts/texgyreadventor-bolditalic-webfont.svg#tex_gyre_adventorbold_italic") format("svg");
   font-weight: bold;
   font-style: italic;
 }
@@ -59,10 +59,133 @@
 .tds-width-container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1232px;
+  padding: 0 16px;
 }
 
-/* END variables.scss */
+/* END layout.scss */
+/* typography.scss
+==========================================*/
+body {
+  font-family: "Neue Helvetica W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "ITC Avant Garde Gothic W01", "Century Gothic", Arial, serif;
+  margin-bottom: 20px;
+}
+
+.h1,
+h1 {
+  font-size: 36px;
+  color: #19388A;
+}
+
+.h2,
+h2 {
+  font-size: 28px;
+  color: #19388A;
+}
+
+@media (max-width: 584px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+.h3,
+h3 {
+  font-size: 24px;
+  color: #0C8FD0;
+}
+
+.h4,
+h4 {
+  color: #19388A;
+  margin-bottom: 20px;
+}
+
+.h5,
+h5 {
+  color: #0C8FD0;
+  margin-bottom: 20px;
+}
+
+.h6,
+h6 {
+  color: #000;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 584px) {
+  h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+p {
+  line-height: 1.65em;
+  font-size: 14px;
+  margin: 0 0 10px;
+  color: #555555;
+}
+
+a {
+  color: #0C8FD0;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: #19388A;
+}
+
+a strong {
+  color: inherit;
+}
+
+.tds-note {
+  font-size: 11px;
+  font-style: italic;
+}
+
+.tds-emphasize {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.is-emphasized {
+  font-size: 18px;
+  color: #0c8fd0;
+  margin-top: 12px;
+}
+
+/* END typography.scss */
 /* alerts
 ==========================================*/
 .tds-alert {
@@ -137,8 +260,9 @@
 }
 
 .userGreeting {
-  max-width: 1200px;
+  max-width: 1232px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .userGreeting .tds-width-container {
@@ -278,6 +402,7 @@ header ul#header-contact-links li a.contact-links-text {
   display: flex;
   text-decoration: none;
   color: #555;
+  font-size: 14px;
 }
 
 header ul#header-contact-links li a.contact-links-text:hover {
@@ -326,7 +451,7 @@ header ul#header-contact-links li a.contact-chat-icon:before {
   font-family: "ITC Avant Garde Gothic W01", "Century Gothic", Arial, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 40px;
   color: #19388A;
   display: flex;
@@ -442,7 +567,7 @@ footer .footer-links li {
 
 footer .footer-links li a {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 4px 16px;
   border-right: solid 1px #cacaca;
   color: #cacaca;
 }

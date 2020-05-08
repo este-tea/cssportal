@@ -6,7 +6,9 @@ footer {
   border-top: 3px solid rgba(0, 0, 0, 0.2);
   padding: 40px 0;
   .footer-links {
+    margin-top: 20px;
     li {
+      font-family: $bend-font-body;
       a {
         border-right: solid 1px #fff;
         color: #fff;

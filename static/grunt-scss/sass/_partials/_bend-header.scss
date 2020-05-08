@@ -7,6 +7,7 @@ header {
     width: 300px;
     height: 36px;
     background-image: url(../images/logo-bend-horizontal.svg);
+    background-position: left;
   }
 
   ul#header-contact-links {
@@ -34,12 +35,14 @@ header {
 .L0-nav {
   border-bottom: none;
   ul {
+    font-family: $bend-font-headings;
     li {
       position: relative;
       a {
         color: #555;
         transition: all .1s ease-in-out;
         font-weight: 600;
+        padding: 0 20px 0 0;
       }
       a:hover {
         color: #f70;
@@ -88,9 +91,6 @@ header {
       }
     }
   }
-}
-.welcome-message {
-  border-bottom: solid 2px #f70;
 }
 
 /* END bend-header.scss */

@@ -1,0 +1,117 @@
+/* bend-typography
+==========================================*/
+body {
+  font-family: $bend-font-body;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $bend-font-headings;
+  font-weight: 700;
+  margin: 0;
+}
+
+.h1,
+h1 {
+  color: $bend-orange;
+  margin-bottom: 12px;
+  border-bottom: solid 1px silver;
+  padding-bottom: 8px;
+}
+
+.h2,
+h2 {
+  margin-bottom: 12px;
+  margin-top: 24px;
+  color: $bend-gray;
+}
+
+.h3,
+h3 {
+  color: $bend-lt-blue;
+}
+
+.h4,
+h4 {
+  color: #ff7700;
+}
+
+.h6,
+h6 {
+  font-size: 14px;
+  color: #64bfd3;
+}
+
+.h5,
+.h6,
+h5,
+h6 {
+  line-height: 1.1;
+  color: inherit;
+}
+
+.h5,
+h5 {
+  font-size: 16px;
+}
+
+h4,
+h5,
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width:768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+}
+
+sup {
+  top: -0.4em;
+  font-size: 60%;
+}
+
+p.tds-note {
+  font-size: 14px;
+  font-style: italic;
+}
+
+li,
+p {
+  color: $bend-gray;
+  padding: 0;
+}
+
+p {
+  margin: 1em 0 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.has-emphasis {
+  font-weight: 600;
+  color: #ff7700;
+}
