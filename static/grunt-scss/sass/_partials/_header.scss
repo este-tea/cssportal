@@ -168,9 +168,8 @@ header {
 @media (max-width:$screen-md) {
 
   #menuButton {
-    border: solid 2px $tds-gray;
-    background-color: transparent;
-    color: $tds-dk-gray;
+    border: solid 2px $tds-dk-blue;
+    background-color: $tds-dk-blue;
     padding: 8px !important;
     height: 36px;
     display: inline-block !important;
@@ -179,12 +178,20 @@ header {
     text-decoration: none;
     margin-top: 40px;
     margin-right: 20px;
+    border-radius: 2px;
+    color: $tds-white;
   }
-  #menuButton:hover {
+  #menuButton.collapsed {
+    border: solid 2px $tds-gray;
+    background-color: transparent;
+    color: $tds-dk-gray;
+  }
+  #menuButton.collapsed:hover {
     border: solid 2px $tds-dk-blue;
     color: $tds-white !important;
     background-color: $tds-dk-blue;
   }
+
 
   .L0-nav {
     background-color: $tds-dkr-gray;

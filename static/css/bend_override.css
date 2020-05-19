@@ -655,24 +655,6 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
   border-bottom: 6px solid #cc5f00;
 }
 
-.L0-nav ul li.active a {
-  color: #f70;
-  background-color: transparent;
-}
-
-.L0-nav ul li.active a:before {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin: 0 0 0 -12px;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid #cc5f00;
-}
-
 .L0-nav .tds-searchbar {
   margin-left: auto;
 }
@@ -693,9 +675,20 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
     background-image: url(../images/logo-bend-vertical.svg);
     background-position: left;
   }
-  #menuButton:hover {
+  #menuButton {
+    border: solid 2px #555555;
+    background-color: #555555;
+    color: #FFFFFF;
+  }
+  #menuButton.collapsed {
+    border: solid 2px #CCCCCC;
+    background-color: transparent;
+    color: #555555;
+  }
+  #menuButton.collapsed:hover {
     border: solid 2px #F37D1D;
     background-color: #F37D1D;
+    color: #FFFFFF !important;
   }
   .L0-nav ul li {
     background: #777777 url(../images/checkers-dark.gif) left top repeat;
@@ -703,26 +696,20 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
   .L0-nav ul li a {
     color: #FFFFFF;
     background: #777777 url(../images/checkers-dark.gif) left top repeat;
-    border-bottom: 2px solid #F37D1D;
+    border-bottom: 1px solid #F37D1D;
     padding: 10px 0;
   }
   .L0-nav ul li a:hover {
-    background-color: #555555;
+    color: #FFFFFF;
+    background-color: #F37D1D;
+    background: #F37D1D;
   }
   .L0-nav ul li a:hover:before {
     border: none !important;
   }
-  .L0-nav ul li.active a {
-    background-color: #777777;
-  }
-  .L0-nav ul li.active a:hover {
-    background-color: #555555;
-  }
-  .L0-nav ul li.active a:before {
-    border: none !important;
-  }
   .L0-nav ul li:hover {
-    background-color: #555555;
+    background-color: #F37D1D;
+    background: #F37D1D;
   }
 }
 
