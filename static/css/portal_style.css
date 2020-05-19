@@ -63,7 +63,7 @@
   padding: 0 16px;
 }
 
-@media (max-width: 993px) {
+@media (max-width: 991px) {
   .tds-width-container {
     padding: 0;
   }
@@ -538,7 +538,7 @@ header ul#header-contact-links li a.contact-chat-icon:before {
   text-indent: -9999em;
 }
 
-@media (max-width: 993px) {
+@media (max-width: 991px) {
   #menuButton {
     border: solid 2px #19388A;
     background-color: #19388A;
@@ -591,6 +591,18 @@ header ul#header-contact-links li a.contact-chat-icon:before {
     color: #FFFFFF;
     background-color: #555555;
     cursor: pointer;
+  }
+  .L0-nav ul li a:hover:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../images/ui/right-arrow-green.png");
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 90vw;
+    transform: translateY(-25px);
   }
   .L0-nav ul li.active a {
     color: #FFFFFF;

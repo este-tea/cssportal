@@ -116,6 +116,12 @@ header {
         a:hover:before {
           border: none !important;
         }
+        a:hover:after {
+          background: url('../images/ui/up-caret-white.png');
+          transform: rotate(90deg) translatex(-25px);
+          background-size: contain;
+          height: 7px;
+        }
       }
       li:hover {
         background-color: $tds-orange;

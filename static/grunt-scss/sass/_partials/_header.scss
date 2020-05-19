@@ -219,6 +219,18 @@ header {
           background-color: $tds-dk-gray;
           cursor: pointer;
         }
+        a:hover:after {
+          content: "";
+          display: block;
+          position: absolute;
+          background: url('../images/ui/right-arrow-green.png');
+          width: 16px;
+          height: 16px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          left: 90vw;
+          transform: translateY(-25px);
+        }
       }
       li.active {
         a {

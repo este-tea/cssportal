@@ -668,7 +668,7 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
   height: 40px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   #menuButton {
     border: solid 2px #555555;
     background-color: #555555;
@@ -707,6 +707,12 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
   }
   .L0-nav ul li a:hover:before {
     border: none !important;
+  }
+  .L0-nav ul li a:hover:after {
+    background: url("../images/ui/up-caret-white.png");
+    transform: rotate(90deg) translatex(-25px);
+    background-size: contain;
+    height: 7px;
   }
   .L0-nav ul li:hover {
     background-color: #F37D1D;
