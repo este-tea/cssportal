@@ -14,22 +14,28 @@ footer {
         color: #fff;
       }
     }
-    @media (max-width:$screen-xxs) {
-        li {
-          a {
-            display: block;
-            padding: 16px;
-            border-right: none;
-            border-bottom: solid 1px $tds-headfoot-text-color;
-          }
-        }
-        li:first-of-type a {
-            border-top: solid 1px $tds-headfoot-text-color;
-        }
-    }
   }
   .copyright {
     color: #fff;
+  }
+}
+@media (max-width:$screen-xxs) {
+  footer {
+    padding-top: 0;
+    .footer-links {
+      li {
+        text-align: left;
+        a {
+          display: block;
+          padding: 16px 16px 16px 0;
+          border-right: none;
+          border-bottom: solid 1px $tds-headfoot-text-color;
+        }
+      }
+      li:first-of-type a {
+          border-top: solid 1px $tds-headfoot-text-color;
+      }
+    }
   }
 }
 /* END bend-footer.scss */

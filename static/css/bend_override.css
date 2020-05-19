@@ -669,16 +669,11 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
 }
 
 @media (max-width: 992px) {
-  header a#tds-logo {
-    width: 300px;
-    height: 36px;
-    background-image: url(../images/logo-bend-vertical.svg);
-    background-position: left;
-  }
   #menuButton {
     border: solid 2px #555555;
     background-color: #555555;
     color: #FFFFFF;
+    border-radius: 2px;
   }
   #menuButton.collapsed {
     border: solid 2px #CCCCCC;
@@ -690,6 +685,11 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
     background-color: #F37D1D;
     color: #FFFFFF !important;
   }
+  .L0-nav {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
   .L0-nav ul li {
     background: #777777 url(../images/checkers-dark.gif) left top repeat;
   }
@@ -697,7 +697,8 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
     color: #FFFFFF;
     background: #777777 url(../images/checkers-dark.gif) left top repeat;
     border-bottom: 1px solid #F37D1D;
-    padding: 10px 0;
+    padding: 10px 10px;
+    margin: 0;
   }
   .L0-nav ul li a:hover {
     color: #FFFFFF;
@@ -710,6 +711,15 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
   .L0-nav ul li:hover {
     background-color: #F37D1D;
     background: #F37D1D;
+  }
+}
+
+@media (max-width: 400px) {
+  header a#tds-logo {
+    width: 300px;
+    height: 36px;
+    background-image: url(../images/logo-bend-vertical.svg);
+    background-position: left;
   }
 }
 
@@ -736,20 +746,26 @@ footer .footer-links li a {
   color: #fff;
 }
 
+footer .copyright {
+  color: #fff;
+}
+
 @media (max-width: 400px) {
+  footer {
+    padding-top: 0;
+  }
+  footer .footer-links li {
+    text-align: left;
+  }
   footer .footer-links li a {
     display: block;
-    padding: 16px;
+    padding: 16px 16px 16px 0;
     border-right: none;
     border-bottom: solid 1px #cacaca;
   }
   footer .footer-links li:first-of-type a {
     border-top: solid 1px #cacaca;
   }
-}
-
-footer .copyright {
-  color: #fff;
 }
 
 /* END bend-footer.scss */

@@ -77,18 +77,11 @@ header {
 
 @media (max-width:$screen-md) {
 
-  header a#tds-logo {
-    width: 300px;
-    height: 36px;
-    background-image: url(../images/logo-bend-vertical.svg);
-    background-position: left;
-  }
-
-
   #menuButton {
     border: solid 2px $tds-dk-gray;
     background-color: $tds-dk-gray;
     color: $tds-white;
+    border-radius: 2px;
   }
   #menuButton.collapsed {
     border: solid 2px $tds-gray;
@@ -101,18 +94,19 @@ header {
     color: $tds-white !important;
   }
 
-
   .L0-nav {
-
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     ul {
-
       li {
         background: $tds-dk-gray-80 url(../images/checkers-dark.gif) left top repeat;
         a {
           color: $tds-white;
           background: $tds-dk-gray-80 url(../images/checkers-dark.gif) left top repeat;
           border-bottom: 1px solid $tds-orange;
-          padding: 10px 0;
+          padding: 10px 10px;
+          margin: 0;
         }
         a:hover {
           color: $tds-white;
@@ -128,6 +122,14 @@ header {
         background: $tds-orange;
       }
     }
+  }
+}
+@media (max-width:$screen-xxs) {
+  header a#tds-logo {
+    width: 300px;
+    height: 36px;
+    background-image: url(../images/logo-bend-vertical.svg);
+    background-position: left;
   }
 }
 
