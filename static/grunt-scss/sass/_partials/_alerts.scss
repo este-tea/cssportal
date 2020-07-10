@@ -25,14 +25,10 @@
   a {
     color: #000;
     text-decoration: underline;
-    &:focus {
+    padding: 0 8px;
+    &:hover, &:focus, &:active {
       background: #555;
       color: white;
-      padding: 0 8px;
-    }
-    &:hover {
-      text-decoration: none;
-      font-weight: 500;
     }
   }
 
