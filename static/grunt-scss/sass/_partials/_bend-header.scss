@@ -10,16 +10,20 @@ a#tds-logo {
   height: 36px;
   background-image: url(../images/logo-bend-horizontal.svg);
   background-position: left;
-  @media (max-width:$screen-xxs) {
+  @media (max-width:$screen-sm) {
+    width: 98px;
+    height: 36px;
     background-image: url(../images/logo-bend-vertical.svg);
   }
 }
 
 ul#header-contact-links {
   li {
+    margin: 0 0 0 10px;
     a.contact-links-text {
-      padding: 12px 6px 6px 3px;
-      font-weight: 600;
+      padding: 0 10px 0 4px;
+      font-weight: 500;
+      font-family: $bend-font-body;
       &:before {
         background-color: #f70;
       }
@@ -27,7 +31,6 @@ ul#header-contact-links {
         background-color: #f70;
         color: #fff;
         border-radius: 3px;
-        transition: all .1s ease-in-out;
         &:before {
           background-color: #f70;
         }
@@ -44,25 +47,34 @@ ul#header-contact-links {
       position: relative;
       a {
         color: #555;
-        transition: all .1s ease-in-out;
         font-weight: 600;
-        padding: 0 20px 0 0;
-        &:hover, &:focus, &:active {
+        padding: 0;
+        margin: 0 20px 0 0;
+      }
+      &:hover {
+        background-color: transparent;
+      }
+      &.active, a:hover, a:focus, a:active {
+        color: #f70;
+        background-color: transparent;
+        cursor: pointer;
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          width: 0;
+          height: 0;
+          margin: 0 0 0 -6px;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-bottom: 6px solid #cc5f00;
+        }
+      }
+      &.active {
+        a {
           color: #f70;
           background-color: transparent;
-          cursor: pointer;
-          &:before {
-            content: "";
-            position: absolute;
-            bottom: 0px;
-            left: 50%;
-            width: 0;
-            height: 0;
-            margin: 0 0 0 -6px;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-bottom: 6px solid #cc5f00;
-          }
         }
       }
     }
@@ -80,23 +92,40 @@ ul#header-contact-links {
 }
 
 @media (max-width:$screen-md) {
-
   .L0-nav {
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     ul {
+      border-top: solid 4px #cc5f00;
       li {
         background: $tds-dk-gray-80 url(../images/checkers-dark.gif) left top repeat;
-        &:hover, &:focus, &:active {
+        &:last-child {
+          border-bottom: none;
+        }
+        &.active {
+          color: $tds-white;
           background-color: $tds-orange;
-          background: $tds-orange;
+          &:hover, a:hover {
+            background-color: $tds-orange;
+          }
+          &:before {
+            content: none;
+          }
+          a {
+            font-weight: 700!important;
+          }
+        }
+        &:hover, &:focus, &:active {
+          color: $tds-white;
+          background-color: $tds-orange;
         }
         a {
+          font-weight: 500;
           color: $tds-white;
           background: $tds-dk-gray-80 url(../images/checkers-dark.gif) left top repeat;
           border-bottom: 1px solid $tds-orange;
-          padding: 10px 10px;
+          padding: 6px 16px;
           margin: 0;
           &:hover, &:focus, &:active {
             color: $tds-white;
@@ -106,10 +135,15 @@ ul#header-contact-links {
               border: none !important;
             }
             &:after {
-              background: url('../images/ui/up-caret-white.png');
-              transform: rotate(90deg) translatex(-25px);
-              background-size: contain;
-              height: 7px;
+              background: none;
+              width: 0;
+              height: 0;
+              top: auto;
+              left: auto;
+              right: 16px;
+              border-top: 6px solid transparent;
+              border-bottom: 6px solid transparent;
+              border-left: 6px solid white;
             }
           }
         }
@@ -118,19 +152,48 @@ ul#header-contact-links {
   }
 }
 
-@media (max-width:$screen-md) {
+#menuButton {
+  font-family: $bend-font-headings;
+  text-transform: uppercase;
+  border-radius: 3px;
+  &:hover, &:focus, &:active {
+    border: solid 1px $tds-orange;
+    background-color: $tds-orange;
+    color: $tds-white !important;
+  }
+}
 
+@media (max-width:$screen-md) {
   #menuButton {
-    border: solid 2px $tds-dk-gray;
-    background-color: $tds-dk-gray;
+    border: solid 1px $bend-gray;
+    background-color: $bend-gray;
     color: $tds-white;
     border-radius: 2px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -27px;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin: 0 0 0 -6px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #cc5f00;
+      @media (max-width: 540px) {
+        bottom: -19px;
+      }
+    }
     &.collapsed {
-      border: solid 2px $tds-gray;
+      border: solid 1px $bend-gray;
       background-color: transparent;
       color: $tds-dk-gray;
+      &:before {
+        content: none;
+      }
       &:hover, &:focus, &:active {
-        border: solid 2px $tds-orange;
+        border: solid 1px $tds-orange;
         background-color: $tds-orange;
         color: $tds-white !important;
       }
@@ -138,4 +201,7 @@ ul#header-contact-links {
   }
 }
 
+.tds-width-container.header-nav {
+  border-top: none;
+}
 /* END bend-header.scss */

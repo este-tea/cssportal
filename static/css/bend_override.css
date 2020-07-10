@@ -590,30 +590,42 @@ header {
   border-bottom: solid 3px rgba(0, 0, 0, 0.25);
 }
 
-header a#tds-logo {
+a#tds-logo {
   width: 300px;
   height: 36px;
   background-image: url(../images/logo-bend-horizontal.svg);
   background-position: left;
 }
 
-header ul#header-contact-links li a.contact-links-text {
-  padding: 12px 6px 6px 3px;
-  font-weight: 600;
+@media (max-width: 768px) {
+  a#tds-logo {
+    width: 98px;
+    height: 36px;
+    background-image: url(../images/logo-bend-vertical.svg);
+  }
 }
 
-header ul#header-contact-links li a.contact-links-text:hover {
+ul#header-contact-links li {
+  margin: 0 0 0 10px;
+}
+
+ul#header-contact-links li a.contact-links-text {
+  padding: 0 10px 0 4px;
+  font-weight: 500;
+  font-family: "Museo Sans W01", Museo Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+ul#header-contact-links li a.contact-links-text:before {
+  background-color: #f70;
+}
+
+ul#header-contact-links li a.contact-links-text:hover, ul#header-contact-links li a.contact-links-text:focus, ul#header-contact-links li a.contact-links-text:active {
   background-color: #f70;
   color: #fff;
   border-radius: 3px;
-  transition: all .1s ease-in-out;
 }
 
-header ul#header-contact-links li a.contact-links-text:before {
-  background-color: #f70;
-}
-
-header ul#header-contact-links li a.contact-links-text:hover:before {
+ul#header-contact-links li a.contact-links-text:hover:before, ul#header-contact-links li a.contact-links-text:focus:before, ul#header-contact-links li a.contact-links-text:active:before {
   background-color: #f70;
 }
 
@@ -631,18 +643,22 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
 
 .L0-nav ul li a {
   color: #555;
-  transition: all .1s ease-in-out;
   font-weight: 600;
-  padding: 0 20px 0 0;
+  padding: 0;
+  margin: 0 20px 0 0;
 }
 
-.L0-nav ul li a:hover {
+.L0-nav ul li:hover {
+  background-color: transparent;
+}
+
+.L0-nav ul li.active, .L0-nav ul li a:hover, .L0-nav ul li a:focus, .L0-nav ul li a:active {
   color: #f70;
   background-color: transparent;
   cursor: pointer;
 }
 
-.L0-nav ul li a:hover:before {
+.L0-nav ul li.active:before, .L0-nav ul li a:hover:before, .L0-nav ul li a:focus:before, .L0-nav ul li a:active:before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -653,6 +669,11 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-bottom: 6px solid #cc5f00;
+}
+
+.L0-nav ul li.active a {
+  color: #f70;
+  background-color: transparent;
 }
 
 .L0-nav .tds-searchbar {
@@ -669,64 +690,124 @@ header ul#header-contact-links li a.contact-links-text:hover:before {
 }
 
 @media (max-width: 991px) {
-  #menuButton {
-    border: solid 2px #555555;
-    background-color: #555555;
-    color: #FFFFFF;
-    border-radius: 2px;
-  }
-  #menuButton.collapsed {
-    border: solid 2px #CCCCCC;
-    background-color: transparent;
-    color: #555555;
-  }
-  #menuButton.collapsed:hover {
-    border: solid 2px #F37D1D;
-    background-color: #F37D1D;
-    color: #FFFFFF !important;
-  }
   .L0-nav {
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
   }
+  .L0-nav ul {
+    border-top: solid 4px #cc5f00;
+  }
   .L0-nav ul li {
     background: #777777 url(../images/checkers-dark.gif) left top repeat;
   }
+  .L0-nav ul li:last-child {
+    border-bottom: none;
+  }
+  .L0-nav ul li.active {
+    color: #FFFFFF;
+    background-color: #F37D1D;
+  }
+  .L0-nav ul li.active:hover, .L0-nav ul li.active a:hover {
+    background-color: #F37D1D;
+  }
+  .L0-nav ul li.active:before {
+    content: none;
+  }
+  .L0-nav ul li.active a {
+    font-weight: 700 !important;
+  }
+  .L0-nav ul li:hover, .L0-nav ul li:focus, .L0-nav ul li:active {
+    color: #FFFFFF;
+    background-color: #F37D1D;
+  }
   .L0-nav ul li a {
+    font-weight: 500;
     color: #FFFFFF;
     background: #777777 url(../images/checkers-dark.gif) left top repeat;
     border-bottom: 1px solid #F37D1D;
-    padding: 10px 10px;
+    padding: 6px 16px;
     margin: 0;
   }
-  .L0-nav ul li a:hover {
+  .L0-nav ul li a:hover, .L0-nav ul li a:focus, .L0-nav ul li a:active {
     color: #FFFFFF;
     background-color: #F37D1D;
     background: #F37D1D;
   }
-  .L0-nav ul li a:hover:before {
+  .L0-nav ul li a:hover:before, .L0-nav ul li a:focus:before, .L0-nav ul li a:active:before {
     border: none !important;
   }
-  .L0-nav ul li a:hover:after {
-    background: url("../images/ui/up-caret-white.png");
-    transform: rotate(90deg) translatex(-25px);
-    background-size: contain;
-    height: 7px;
-  }
-  .L0-nav ul li:hover {
-    background-color: #F37D1D;
-    background: #F37D1D;
+  .L0-nav ul li a:hover:after, .L0-nav ul li a:focus:after, .L0-nav ul li a:active:after {
+    background: none;
+    width: 0;
+    height: 0;
+    top: auto;
+    left: auto;
+    right: 16px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid white;
   }
 }
 
-@media (max-width: 400px) {
-  header a#tds-logo {
-    width: 300px;
-    height: 36px;
-    background-image: url(../images/logo-bend-vertical.svg);
-    background-position: left;
+#menuButton {
+  font-family: "Museo W01", Museo, Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+#menuButton:hover, #menuButton:focus, #menuButton:active {
+  border: solid 1px #F37D1D;
+  background-color: #F37D1D;
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 991px) {
+  #menuButton {
+    border: solid 1px #585852;
+    background-color: #585852;
+    color: #FFFFFF;
+    border-radius: 2px;
+    position: relative;
   }
+  #menuButton:before {
+    content: "";
+    position: absolute;
+    bottom: -27px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin: 0 0 0 -6px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #cc5f00;
+  }
+}
+
+@media (max-width: 991px) and (max-width: 540px) {
+  #menuButton:before {
+    bottom: -19px;
+  }
+}
+
+@media (max-width: 991px) {
+  #menuButton.collapsed {
+    border: solid 1px #585852;
+    background-color: transparent;
+    color: #555555;
+  }
+  #menuButton.collapsed:before {
+    content: none;
+  }
+  #menuButton.collapsed:hover, #menuButton.collapsed:focus, #menuButton.collapsed:active {
+    border: solid 1px #F37D1D;
+    background-color: #F37D1D;
+    color: #FFFFFF !important;
+  }
+}
+
+.tds-width-container.header-nav {
+  border-top: none;
 }
 
 /* END bend-header.scss */
@@ -736,7 +817,6 @@ footer {
   background: #518EAA url(../images/bg-footer-residential.jpg) no-repeat scroll center bottom;
   background-size: cover;
   border-top: 3px solid rgba(0, 0, 0, 0.2);
-  padding: 40px 0;
 }
 
 footer .footer-links {
@@ -759,9 +839,6 @@ footer .copyright {
 @media (max-width: 400px) {
   footer {
     padding-top: 0;
-  }
-  footer .footer-links li {
-    text-align: left;
   }
   footer .footer-links li a {
     display: block;
