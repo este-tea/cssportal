@@ -4,21 +4,21 @@ footer {
   background-color: $tds-dk-gray;
   text-align: center;
   border-top: solid 4px $tds-dkr-gray;
-  padding: 1.75em 0;
-
+  padding: 0 0 36px 0;
   .phone {
     color: white;
     font-weight: 500;
-
+    font-size: 18px;
+    margin: 24px 16px;
     a {
       color: white;
       font-weight: 500;
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
   .footer-links {
-    margin-bottom: 20px;
+    margin: 0 20px;
     list-style: none;
     padding: 0;
     text-align: center;
@@ -34,13 +34,35 @@ footer {
 
       a {
         display: inline-block;
-        padding: 8px 12px;
+        padding: 4px 16px;
         border-right: solid 1px $tds-headfoot-text-color;
         color: $tds-headfoot-text-color;
+        &:hover, &:focus, &:active {
+          background-color: rgba(0,0,0,.25);color: white;
+        }
       }
     }
     li:last-child a {
       border-right: none;
+    }
+
+    @media (max-width:$screen-xxs) {
+        li {
+          display: block;
+          text-align: center;
+          &:first-child {
+            a {
+              border-top: solid 1px $tds-headfoot-text-color;
+            }
+          }
+
+          a {
+            display: block;
+            padding: 16px;
+            border-right: none;
+            border-bottom: solid 1px $tds-headfoot-text-color;
+          }
+        }
     }
   }
 
@@ -48,7 +70,9 @@ footer {
     font-size: 0.75em;
     line-height: 1.5em;
     color: $tds-headfoot-text-color;
+    margin: 24px 16px 0 16px;
   }
 }
+
 
 /* END footer.scss */
