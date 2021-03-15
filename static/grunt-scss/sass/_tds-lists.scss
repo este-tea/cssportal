@@ -1,0 +1,25 @@
+/* tds-lists
+==========================================*/
+.alert ul li:before {
+  content: "\e80c";
+  display: inline-block;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top: -3px;
+  margin-right: 12px;
+  margin-left: -20px;
+  font-size: 8px;
+  color: #000;
+  transform: translate(0,0);
+}
+
+
+/* END tds-lists.scss */

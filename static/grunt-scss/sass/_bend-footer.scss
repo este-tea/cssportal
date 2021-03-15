@@ -27,11 +27,11 @@ footer {
           display: block;
           padding: 16px 16px 16px 0;
           border-right: none;
-          border-bottom: solid 1px $tds-headfoot-text-color;
+          border-bottom: solid 1px $border-color;
         }
       }
       li:first-of-type a {
-          border-top: solid 1px $tds-headfoot-text-color;
+          border-top: solid 1px $border-color;
       }
     }
   }

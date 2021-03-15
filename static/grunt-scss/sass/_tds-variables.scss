@@ -1,0 +1,281 @@
+/* variables.scss
+==========================================*/
+
+//
+// Color system
+//
+// TDS Blue: main brand color and color of logo
+$tds-dk-blue: #19388A;
+$tds-blue-100: $tds-dk-blue;
+$tds-blue-80: #4760A1; //rollover color for blue-100
+$tds-blue-60: #7588B9;
+$tds-blue-40: #A3AFD0;
+$tds-blue-dk: darken($tds-blue-100, 15%);
+
+// TDS Light Blue: main accent color
+$tds-lt-blue: #0C8FD0;
+$tds-lt-blue-100: $tds-lt-blue;
+$tds-lt-blue-80: #25ACF2; //rollover color for lt-blue-100
+$tds-lt-blue-60: #5CC1F5;
+$tds-lt-blue-40: #92D5F8;
+$tds-lt-blue-dk: darken($tds-lt-blue-100, 15%);
+
+// TDS Green: secondary accent color, used for add to cart or to encourage buying
+$tds-green: #6B9C22;
+$tds-green-100: $tds-green;
+$tds-green-80: #7BB227; //rollover color for green-100
+$tds-green-60: #9CC55D;
+$tds-green-40: #BDD893;
+$tds-green-dk: darken($tds-green-100, 15%);
+
+// TDS Orange: tertiary accent color, used rarely to promote sale or deal
+$tds-orange: #F37D1D;
+$tds-orange-100: $tds-orange;
+$tds-orange-80: #F69E56; //rollover color for orange-100
+$tds-orange-60: #F9BE8E;
+$tds-orange-dk: darken($tds-orange-100, 15%);
+
+$tds-white: #FFFFFF;
+$tds-black: #2a2a2a;
+$white: $tds-white;
+$black: $tds-black;
+
+$tds-lt-gray: #e9e9e9;
+$tds-ltr-gray: $tds-lt-gray;
+$tds-gray: #CCCCCC;
+$tds-gray-dkr-10: #BBBBBB;
+$tds-gray-dkr-20: #999999;
+$tds-gray-dkr-30: #777777;
+$tds-gray-dkr-40: #555555;
+$tds-gray-dkr-50: #353535;
+$tds-gray-dkr-60: #2a2a2a;
+
+$tds-dk-gray: $tds-gray-dkr-40;
+$tds-dkr-gray: $tds-gray-dkr-50;
+
+// BOOTSTRAP COLOR OVERRIDES
+$blue:    $tds-dk-blue !default;
+$red:     #CB1D1D !default;
+$orange:  $tds-orange !default;
+$yellow:  #FFCE00 !default;
+$green:   $tds-green !default;
+
+$primary:       $tds-dk-blue !default;
+$secondary:     $tds-lt-blue !default;
+$success:       $green !default;
+$info:          $tds-lt-blue-60 !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $tds-lt-gray !default;
+$dark:          $tds-dk-gray !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+), $theme-colors);
+
+// ALERT/STATUS MESSAGES
+$tds-lt-bluegray: #E8EBF3; //shopper ID status bar
+$tds-info-bg: $tds-lt-bluegray;
+
+$tds-status: $tds-lt-blue-80;
+$tds-status-bg: lighten($tds-lt-blue-80, 40%);
+
+$tds-warning: $yellow;
+$tds-warning-bg: lighten($yellow, 40%);
+
+$tds-error: $red;
+$tds-error-bg: lighten($red, 50%);
+
+$tds-success: $tds-green-100;
+$tds-success-bg: lighten($tds-green-100, 50%);
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+), $spacers);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+$sizes: map-merge((
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+), $sizes);
+
+$icon-spacer: ($spacer * .75);
+
+// TYPOGRAPHY
+// ====================================
+// Body
+$body-bg: $tds-white;
+$body-color: $tds-dk-gray;
+
+// Links / Style anchor elements.
+$link-color: $primary !default;
+$link-hover-color: darken($primary, 20%) !default;
+
+// Paragraphs / Style p element.
+$text-color: $tds-dk-gray;
+$paragraph-margin-bottom:   1rem !default;
+
+// GRID BREAKPOINTS
+// ====================================
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           28px !default;
+
+// BOOTSTRAP 3 BREAKPOINTS
+// Replaces variable references in the bootstrap scss
+$screen-xxxs: 320px;
+$screen-xxxs-min: $screen-xxxs;
+$screen-xxs: 400px;
+$screen-xxs-min: $screen-xxs;
+$screen-xs: 576px;
+$screen-xs-min: $screen-xs;
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-md: 991px;
+$screen-md-min: $screen-md;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxxs-max: ($screen-xxs-min - 1);
+$screen-xxs-max:  ($screen-xs-min - 1);
+$screen-xs-max:   ($screen-sm-min - 1);
+$screen-sm-max:   ($screen-md-min - 1);
+$screen-md-max:   ($screen-lg-min - 1);
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.5 !default;
+$line-height-sm:              1.5 !default;
+
+$border-width:                2px !default;
+$border-color:                $tds-gray !default;
+
+$border-radius-base:          0;
+$border-radius:               $border-radius-base !default;
+$border-radius-lg:            .3rem !default;
+$border-radius-sm:            .2rem !default;
+
+// radius reset
+
+// box shadow setting
+$box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
+
+//** `.form-group` margin
+$form-group-margin-bottom: 20px;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// font families
+$tds-font-family: "ITC Avant Garde Gothic W01", "Century Gothic", Arial, serif;
+$tds-font-body: "Neue Helvetica W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: $tds-font-family;
+$tds-font-primary: $tds-font-family;
+$tds-font-secondary: $tds-font-body;
+
+
+// font weights
+$tds-font-xlight: 100; //works for avant garde only
+$tds-font-light: 200; //works for avant garde only
+$tds-font-thin: 300; //works for helvetica only
+$tds-font-normal: 400;
+$tds-font-medium: 500;
+$tds-font-bold: 600;
+$tds-font-heavy: 700;
+
+// INPUT STYLES
+// ====================================
+
+//border radius
+$input-border-radius: $border-radius-base;
+
+
+//LAYOUT
+// ====================================
+
+// Removes container width settings below 960px
+$container-tablet: 100%;
+
+// responsive padding inside page banners and around page content
+$tds-padding-lg: 40px;
+$tds-padding-md: 28px;
+$tds-padding-sm: 16px;
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:          .75rem !default;
+$table-cell-padding-sm:       .3rem !default;
+
+$table-bg:                    transparent !default;
+$table-accent-bg:             rgba($black, .05) !default;
+$table-hover-bg:              rgba($black, .075) !default;
+$table-active-bg:             $table-hover-bg !default;
+
+$table-border-width:          $border-width !default;
+$table-border-color:          $tds-lt-gray !default;
+
+$table-head-bg:               $tds-lt-gray !default;
+$table-head-color:            $tds-dk-blue !default;
+
+$table-dark-bg:               $tds-dkr-gray !default;
+$table-dark-accent-bg:        rgba($white, .05) !default;
+$table-dark-hover-bg:         rgba($white, .075) !default;
+$table-dark-border-color:     lighten($tds-dkr-gray, 7.5%) !default;
+
+
+/* END variables.scss */

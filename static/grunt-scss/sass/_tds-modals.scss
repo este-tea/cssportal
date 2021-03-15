@@ -1,0 +1,142 @@
+/* tds-modals
+==========================================*/
+// top border
+.modal-content {
+  border: 0px solid transparent;
+  border-top: 5px solid $tds-lt-blue;
+  border-radius: $border-radius-base;
+  background-clip: initial;
+}
+
+.modal-header {
+  position: relative;
+  display: initial;
+  border-bottom: none;
+}
+
+.modal-header .close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+}
+
+.modal-dialog {
+  width: 100%; //make width fluid
+  max-width: 920px;
+  margin: ($spacer * 3) auto;
+  box-shadow: 0px 3px 8px 0 rgba(0, 0, 0, 75%);
+}
+
+.modal-title.h2 {
+    font-size: 1.75rem;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    line-height: 1.25;
+}
+
+.modal-footer {
+  justify-content: center;
+  border-top: none;
+}
+
+// Loading icon
+// --------
+// Loading icon set up
+.spinner {
+  height: 50px;
+  width: 50px;
+  margin: 14px auto 34px auto;
+  position: relative;
+  -webkit-animation: rotation 1.25s infinite linear;
+  -moz-animation: rotation 1.25s infinite linear;
+  -o-animation: rotation 1.25s infinite linear;
+  animation: rotation 1.25s infinite linear;
+  border-left: 10px solid rgba(37, 172, 242, 0.25);
+  border-right: 10px solid rgba(37, 172, 242, 0.25);
+  border-bottom: 10px solid rgba(37, 172, 242, 0.25);
+  border-top: 10px solid rgba(37, 172, 242, 0.8);
+  border-radius: 100%;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+// full modal styling
+// --------
+.modal.full {
+  padding-right: 0!important;
+}
+
+.modal.full .modal-dialogmodal-dialog {
+  margin: 0;
+  max-width: 100%;
+  height: 100%;
+}
+
+.modal.full .modal-content {
+  height: 100%;
+  box-shadow: none;
+  padding: 0 15px;
+}
+
+.modal.full .modal-body {
+  padding: 0;
+}
+
+.modal.full .modal-body>.tds-alert {
+  margin-top: 24px;
+}
+
+// confirmation modal
+// --------
+.modal.confirmationModal {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 17px;
+}
+
+.modal.confirmationModal .modal-title {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.modal.confirmationModal .modal-body {
+  border-top: none;
+  padding: 15px 28px;
+}
+
+.modal.confirmationModal .modal-footer {
+  text-align: center;
+  padding: 0 15px 28px 15px;
+}

@@ -1,10 +1,10 @@
 /* alerts
 ==========================================*/
-.tds-alert {
+.alert {
   margin-bottom: 20px;
   display: block;
   text-align: left;
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
   width: 100%;
   line-height: 24px;
   font-family: $tds-font-family;
@@ -30,6 +30,11 @@
       background: #555;
       color: white;
     }
+  }
+  .alert-instructions {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   // error items
@@ -59,23 +64,20 @@
     }
   }
 }
-.userGreeting {
-  max-width: 1232px;
-  margin: 0 auto;
-  padding: 0 16px;
-  .tds-width-container {
-      padding: 0;
-  }
-  .tds-alert-greeting {
-      background-color: $tds-info-bg;
-      margin-top: 16px;
-      padding: 14px;
-  }
+
+.alert-greeting {
+  //background-image: url('../images/ui/icon-user.svg');
+  //background-size: 20px;
+  background-color: $tds-info-bg;
+  margin-top: $spacer;
+  //background-position: 0.5rem 0.5rem;
+  //background-repeat: no-repeat;
+  //padding-left: 2.25rem;
 }
 
-
 // red = error
-.tds-alert-error {
+.alert-error,
+.alert-critical {
   background-color: $tds-error-bg;
   border-left: 3px solid $tds-error;
   &.tds-top-border {
@@ -85,16 +87,17 @@
 }
 
 //red alert error icon
-.tds-alert.tds-alert-error {
-  background-image: url('/content/dam/tdstelecom/images/ui/alerts/icon_alert-error.svg');
-  background-size: 20px;
-  background-position: 16px 14px;
+.alert.alert-error,
+.alert.alert-critical {
+  background-image: url('../images/ui/alerts/icon_alert-error.svg');
+  background-size: 1.2rem;
+  background-position: 0.75rem 0.75rem;
   background-repeat: no-repeat;
-  padding-left: 52px;
+  padding-left: 2.75rem;
 }
 
 // Yellow = warning
-.tds-alert-warning {
+.alert-warning {
   background-color: $tds-warning-bg;
   border-left: 3px solid $tds-warning;
   &.tds-top-border {
@@ -104,16 +107,16 @@
 }
 
 //yellow alert warning icon
-.tds-alert.tds-alert-warning {
-    background-image: url('/content/dam/tdstelecom/images/ui/alerts/icon_alert-warning.svg');
-    background-size: 22px;
-    background-position: 16px 16px;
+.alert.alert-warning {
+    background-image: url('../images/ui/alerts/icon_alert-warning.svg');
+    background-size: 1.4rem;
+    background-position: 0.75rem 1rem;
     background-repeat: no-repeat;
-    padding-left: 52px;
+    padding-left: 2.75rem;
 }
 
 // Green = success
-.tds-alert-success {
+.alert-success {
   background-color: $tds-success-bg;
   border-left: 3px solid $tds-green ;
   &.tds-top-border {
@@ -122,8 +125,8 @@
   }
 }
 //green alert success icon
-.tds-alert.tds-alert-success {
-    background-image: url('/content/dam/tdstelecom/images/ui/alerts/icon_alert-success.svg');
+.alert.alert-success {
+    background-image: url('../images/ui/alerts/icon_alert-success.svg');
     background-size: 22px;
     background-position: 16px 11px;
     background-repeat: no-repeat;
@@ -131,35 +134,35 @@
 }
 
 // TDS Lt Blue info or loading
-.tds-alert-loading,
-.tds-alert-info,
-.tds-alert-status {
+.alert-loading,
+.alert-info,
+.alert-status {
     color: black;
     background: $tds-status-bg;
     border-left: solid 3px $tds-status;
 }
 
 //lt-blue alert informational icon
-.tds-alert.tds-alert-info,
-.tds-alert.tds-alert-status  {
-    background-image: url('/content/dam/tdstelecom/images/ui/alerts/icon_alert-information.svg');
+.alert.alert-info,
+.alert.alert-status  {
+    background-image: url('../images/ui/alerts/icon_alert-information.svg');
     background-size: 20px;
     background-position: 16px 11px;
     background-repeat: no-repeat;
     padding-left: 52px;
 }
 
-.tds-alert.tds-alert-info,
-.tds-alert.tds-alert-status {
+.alert.alert-info,
+.alert.alert-status {
     background-size: 20px;
     background-position: 16px 14px;
     padding-left: 52px;
 }
 
 //lt-blue alert loading icon
-.tds-alert.tds-alert-loading {
+.alert.alert-loading {
   padding-left: 52px;
-  background-image: url('/content/dam/tdstelecom/images/ui/tds-spinner-icon.gif');
+  background-image: url('../images/ui/tds-spinner-icon.gif');
   background-size: 22px;
   background-position: 16px 11px;
   background-repeat: no-repeat;

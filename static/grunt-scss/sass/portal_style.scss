@@ -1,21 +1,72 @@
 /* TDS STYLES
-------------------------------------------*/
-// required in order for css to compile correctly
-@import "_partials/_variables.scss";
+==========================================*/
+// TDS BOOTSTRAP VARIABLES OVERRIDES - MODIFY VARIABLES HERE
+// -------------------------------
+@import "_tds-variables.scss";
 
-//base
-@import "_partials/_fonts.scss";
-@import "_partials/_layout.scss";
-@import "_partials/_typography.scss";
+// BOOSTRAP IMPORTS - DO NOT MODIFY THESE FILES
+// commented out what isn't being used
+// -------------------------------
+@import "_bootstrap/functions";
+@import "_bootstrap/variables";
+@import "_bootstrap/mixins";
+@import "_bootstrap/root";
+@import "_bootstrap/reboot";
+//@import "_bootstrap/type";
+//@import "_bootstrap/images";
+@import "_bootstrap/code";
+@import "_bootstrap/grid";
+@import "_bootstrap/tables";
+@import "_bootstrap/forms";
+@import "_bootstrap/buttons";
+@import "_bootstrap/transitions";
+@import "_bootstrap/dropdown";
+@import "_bootstrap/button-group";
+@import "_bootstrap/input-group";
+@import "_bootstrap/custom-forms";
+@import "_bootstrap/nav";
+@import "_bootstrap/navbar";
+@import "_bootstrap/card";
+@import "_bootstrap/breadcrumb";
+//@import "_bootstrap/pagination";
+//@import "_bootstrap/badge";
+//@import "_bootstrap/jumbotron";
+@import "_bootstrap/alert";
+//@import "_bootstrap/progress";
+//@import "_bootstrap/media";
+@import "_bootstrap/list-group";
+@import "_bootstrap/close";
+@import "_bootstrap/modal";
+@import "_bootstrap/tooltip";
+@import "_bootstrap/popover";
+//@import "_bootstrap/carousel";
+@import "_bootstrap/utilities";
+@import "_bootstrap/print";
+
+// TDS BOOTSTRAP OVERRIDES - MODIFY SCSS IN THESE FILES
+// -------------------------------
+@import "_tds-mixins.scss";
+
+// FONTS
+@import "_fonts-fontello.scss";
+@import "_tds-fonts.scss";
+@import "_tds-typography.scss";
+@import "_tds-lists.scss";
+@import "_tds-layout.scss";
+@import "_tds-backgrounds.scss";
+
+@import "_tds-navs.scss";
+@import "_tds-buttons-links.scss";
+@import "_tds-icons.scss";
+@import "_tds-alerts.scss";
+@import "_tds-cards.scss";
+@import "_tds-tables.scss";
+@import "_tds-forms.scss";
+@import "_tds-modals.scss";
+@import "_tds-popovers.scss";
 
 
-@import "_partials/_buttons-links.scss";
-
-//forms
-@import "_partials/_alerts.scss";
-
-//tables
-
-// modules/COMPONENTS
-@import "_partials/_header.scss";
-@import "_partials/_footer.scss";
+// PLUGINS
+@import "_plugin-header.scss";
+@import "_plugin-footer.scss";
+@import "_plugin-contact_preferences.scss";

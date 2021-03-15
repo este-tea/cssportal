@@ -1,0 +1,132 @@
+/* tds-navs.scss
+==========================================*/
+
+// HEADER NAVBAR STYLING
+.navbar {
+    padding: 0;
+}
+
+@media (max-width:$screen-md) {
+  .navbar-nav {
+    background-color: #353535;
+    border-bottom: solid 2px #555;
+  }
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  padding: .75rem 1.2rem;
+  text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-nav > li > a {
+    font-family: $tds-font-family;
+    color: #353535;
+    background-image: linear-gradient(to bottom, #0c8fd0, #0c8fd0 50%, white 50%, white);
+    background-position: 0 100%;
+    background-size: 100% 200%;
+    transition: all 0.2s;
+  }
+}
+
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:hover {
+  text-decoration: none;
+  background-color: #0c8fd0;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-nav > li > a:focus,
+  .navbar-nav > li > a:hover {
+    color: white;
+    background-position: 0 0;
+  }
+}
+
+li.nav-item.active a {
+  background: #19388a;
+  color: white;
+}
+
+a#tds-logo {
+  width: 98px;
+  height: 40px;
+  display: inline-block;
+  margin: 24px 0;
+  background-image: url(../images/logos/logo-tds-glossy-large.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (max-width:540px) {
+    margin: 16px 0;
+  }
+}
+
+.navbar-toggler {
+  &:hover, &:focus, &:active {
+    outline: dotted 1px $tds-lt-blue;
+    background: $tds-lt-blue;
+    border: solid 2px $tds-lt-blue;
+  }
+}
+@media (max-width:$screen-md) {
+  .navbar-toggler {
+    border: solid 2px $tds-dk-blue;
+    background-color: $tds-dk-blue;
+    padding: 8px;
+    height: 36px;
+    margin-left: auto;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 26px;
+    margin-right: 0;
+    border-radius: 0px;
+    color: $tds-white;
+  }
+  .navbar-toggler.collapsed {
+    border: solid 2px $tds-gray;
+    background-color: transparent;
+    color: $tds-dk-gray;
+    &:hover, &:focus, &:active {
+      border: solid 2px $tds-dk-blue;
+      color: $tds-white;
+      background-color: $tds-dk-blue;
+    }
+  }
+}
+@media (max-width:540px) {
+  .navbar-toggler {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+}
+
+// SKIP NAV STYLING
+.skip-nav .btn {
+    padding: 12px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: white;
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+    -webkit-transition: top .3s ease-out,background .3s linear;
+    transition: top .3s ease-out,background .3s linear;
+    text-decoration: underline;
+    z-index: 1050;
+}
+
+.skip-nav .btn:focus {
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline: 0;
+    -webkit-transition: top .3s ease-in,background .3s linear;
+    transition: top .3s ease-in,background .3s linear;
+}
+
+.skip-nav .btn:focus {
+    background: #19388a;
+}
+
+
+/* END tds-navs.scss */

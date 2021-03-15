@@ -1,0 +1,18 @@
+/* tds-layout
+==========================================*/
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
+
+#content {
+   flex: 1;
+}
+
+.container-fluid {
+  max-width: 1600px;
+}
+
+
+/* END tds-layout.scss */

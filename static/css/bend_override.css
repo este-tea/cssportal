@@ -3,26 +3,10 @@
 ------------------------------------------*/
 /* variables.scss
 ==========================================*/
-@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=7fe8cead-d1c9-4a2d-9a8f-4b29252c595c");
-.tds-orange {
-  color: #f37d1d;
-}
-
-.tds-blue {
-  color: #19388a;
-}
-
-.tds-lt-blue {
-  color: #0c8fd0;
-}
-
-.tds-green {
-  color: #7bb227;
-}
-
 /* END variables.scss */
 /* bend-variables.scss
 ==========================================*/
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=7fe8cead-d1c9-4a2d-9a8f-4b29252c595c");
 .brand-primary {
   color: #f70;
 }
@@ -844,10 +828,10 @@ footer .copyright {
     display: block;
     padding: 16px 16px 16px 0;
     border-right: none;
-    border-bottom: solid 1px #cacaca;
+    border-bottom: solid 1px #CCCCCC;
   }
   footer .footer-links li:first-of-type a {
-    border-top: solid 1px #cacaca;
+    border-top: solid 1px #CCCCCC;
   }
 }
 

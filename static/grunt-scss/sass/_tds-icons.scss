@@ -1,0 +1,50 @@
+/* tds-icons
+==========================================*/
+.tds-icon {
+  &:after, &:before {
+    @include tds-icon;
+    @include fontello;
+  }
+  &:before {
+    margin-right: $icon-spacer;
+    margin-left: 0;
+  }
+  &:after {
+    margin-left:  $icon-spacer;
+    margin-right: 0;
+  }
+}
+
+.icon-arrow-left:before,
+.icon-arrow-right:after {
+    content: '\e804';
+}
+
+.icon-plus-left:before,
+.icon-plus-right:after {
+    content: '\e808';
+}
+
+.icon-pencil-left:before,
+.icon-pencil-right:after {
+    content: '\e805';
+}
+
+.icon-x-left:before,
+.icon-x-right:after {
+    content: '\e819';
+}
+
+.btn.icon-img > img {
+  margin-left: ($icon-spacer * .5);
+}
+
+.btn.icon-img.img-left > img {
+  margin-right: ($icon-spacer * .5);
+}
+
+img.btn-icon {
+  margin-top: -($spacer * .25);
+}
+
+/* END tds-icons.scss */

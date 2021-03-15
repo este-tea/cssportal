@@ -1,0 +1,78 @@
+/* buttons-links.scss
+==========================================*/
+// https://getbootstrap.com/docs/4.0/components/buttons/
+
+.btn {
+  font-family: $tds-font-family;
+  box-shadow: $box-shadow;
+
+  &:active,
+  &:focus,
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.card .card-body .btn,
+.card .card-body button,
+table thead .btn,
+table thead button {
+  margin-bottom: 0;
+}
+
+.btn.btn-link {
+  box-shadow: none;
+}
+
+table {
+  .btn.btn-link {
+    padding: 0;
+  }
+}
+
+table th {
+  .btn.btn-link {
+    padding: 0;
+    color: $secondary;
+    &:active,
+    &:focus,
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+table td {
+  .btn-link {
+    color: $secondary;
+    font-family: $tds-font-body;
+    text-decoration: underline;
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+
+.btn + .btn {
+  margin-left: 20px;
+}
+
+a {
+  color: $tds-lt-blue-100;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: $tds-blue-100;
+}
+
+a strong {
+  color: inherit;
+}
+/* END buttons-links.scss */

@@ -1,0 +1,143 @@
+/* tds-cards
+==========================================*/
+// https://getbootstrap.com/docs/4.0/components/card/
+
+.card {
+    margin-bottom: 28px;
+    //padding: 24px;
+    //background-color: $tds-white;
+    border: 3px solid $tds-lt-gray;
+    h2,
+    h3 {
+        margin-top: 0;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    // align blue `ul` squares in cards to the left
+    ul {
+        padding-left: 20px;
+        li {
+            color: $tds-dk-gray;
+            margin-bottom: 6px;
+            &:before {
+                margin-left: -20px;
+                margin-right: 12px;
+            }
+        }
+    }
+    // if tds-card happens to get nested in another card
+    .card {
+        margin-bottom: 0;
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+}
+
+// BackgroundS
+// -----------------------
+.bg-lt-gray,
+.card .card.bg-lt-gray {
+    background-color: $tds-ltr-gray;
+}
+.bg-white,
+.card .card.bg-white {
+    background-color: $tds-white;
+}
+.card.bg-lt-gray,
+.card.bg-white {
+    border: none;
+}
+
+// Card Layouts
+// -----------------------
+
+
+// Card Headings
+// -----------------------
+h2.card-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 12px;
+    color: $tds-gray-dkr-30;
+}
+.card.card-gray {
+    h2 {
+        color: $tds-blue-100;
+    }
+}
+
+.card-title > a {
+    color: #19388a;
+    text-decoration: none;
+    display: block;
+}
+.card-content h3 {
+    color: #0c8fd0;
+}
+
+// Card Image
+// -----------------------
+
+
+// Card Content
+// -----------------------
+.card-content {
+    h1,
+    h2,
+    h3,
+    p {
+        color: $tds-dkr-gray;
+    }
+}
+
+// Card Background Color
+// -----------------------
+.colorBlock .tds-block-dk-blue .card,
+.colorBlock .tds-block-dk-gray .card,
+.colorBlock .tds-block-lt-blue .card,
+.colorBlock .tds-block-orange .card,
+.pagelayout .tds-block-dk-blue .card,
+.pagelayout .tds-block-dk-gray .card,
+.pagelayout .tds-block-lt-blue .card,
+.pagelayout .tds-block-orange .card {
+    background-color: rgba(255,255,255,.80);
+}
+.tds-block-lt-gray .card {
+    background-color: #fff;
+}
+.pagedivision .card.contact-card-form,
+.pagedivision .card.card-gray,
+.pagelayout .card.contact-card-form,
+.pagelayout .card.card-gray {
+    background-color: #e3e3e3;
+}
+.pagedivision .card.card-plain,
+.pagelayout .card.card-plain {
+    background: none;
+}
+// Tweaks
+
+.ch-filler {
+    display: inline-block;
+}
+
+@media screen and (max-width: 580px) {
+    .ch-filler {
+    display: none;
+    }
+}
+
+ // 1 gig page alert cover page content in small form*/
+.parbase.productavailcta.section .tds-alert {
+    clear: both;
+}
+
+// moved to _tds-trouble-reporting-form.scss
+
+//HYDRA-2183 Styling: Referral Page spacing and alignment issues
+.parbase.referralProgram.section .tds-single-card .gallery-grid li {
+ padding:0;
+}
+/* END tds-cards.scss */

@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/portal_style.css">
+    <title>CSS Portal</title>
+  </head>
+  <body>
+    <div class="skip-nav">
+      <a href="#content" tabindex="0" class="btn btn-primary tds-icon icon-arrow-right">Skip to main content</a>
+    </div>
+    <header class="sticky-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#" id="tds-logo"><span class="sr-only">TDS Logo</span></a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+            </button>
+          <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Account Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">View/Pay Bill</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Contact Preferences</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Users & Security</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="content">
+      <div class="container-fluid">
+
+        <div class="user-greeting-plugin">
+          <div class="alert alert-greeting">
+              <p>You are logged in as <b>exampleuser1234@tds.net</b>. Your location is <b>Madison, WI</b>. <a href="#" class="inline-block">Log Out</a></p>
+          </div>
+        </div>
+
+        <h1>Contact Preferences</h1>
+
+        <div class="contact-preferences-plugin">
+
+          <div class="alert alert-warning">
+              <p>You do not have the appropriate account privileges to view this content.</p>
+          </div>
+
+          <div class="card bg-lt-gray">
+            <div class="card-body">
+              <p>Stay informed about your account with notifications from TDS. Choose to receive updates about your service(s), billing and payment reminders, and Internet usage alerts (where applicable).</p>
+              <p class="font-weight-bold">Select how and when you want TDS to contact you.</p>
+              <button class="btn btn-primary tds-icon icon-plus-left" data-toggle="modal" data-target="#EmailContactModal">Add New Email Contact</button>
+              <button class="btn btn-primary tds-icon icon-plus-left" data-toggle="modal" data-target="#PhoneContactModal">Add New Phone Contact</button>
+            </div>
+          </div>
+
+          <div class="current-contact-section email">
+            <h2>Email Contacts</h2>
+            <div id="current-contact-email-table_filter" class="dataTables_filter"><label>Search Email Contacts<input type="search" class="" placeholder="" aria-controls="current-contact-email-table"></label></div>
+            <table id="current-contact-email-table" class="table tds-responsive-table" style="" role="grid">
+              <thead>
+                <tr role="row">
+                  <th>Contact</th>
+                  <th><button class="btn btn-link icon-img" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="General notifications regarding your service and account.">Account<img class="btn-icon" src="../static/images/ui/alerts/icon_alert-information.svg" alt="More information about Account" height="14" width="14"></button></th>
+                  <th><button class="btn btn-link icon-img" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="Notifications about your bill and payments. Note: ePay customers will receive select notifications via email from ePay.">Billing<img class="btn-icon" src="../static/images/ui/alerts/icon_alert-information.svg" alt="More information about Billing" height="14" width="14"></button></th>
+                  <th><button class="btn btn-link icon-img" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="Notifications related to your monthly Internet usage.">Data Usage<img class="btn-icon" src="../static/images/ui/alerts/icon_alert-information.svg" alt="More information about Data Usage" height="14" width="14"></button></th>
+                  <th><button class="btn btn-link icon-img" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="Primary and ePay contacts cannot be deleted without first designating a different Primary or ePay contact.">Actions<img class="btn-icon" src="../static/images/ui/alerts/icon_alert-information.svg" alt="More information about Data Usage" height="14" width="14"></button></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Contact">
+                    <div class="contact">email@domain.com</div>
+                  </td>
+                  <td data-label="Account">
+                    <div class="account">
+                      <div class="checkbox primary-email">
+                        <label for="setPrimaryEmail" class="set-primary-contact">
+                          <input type="checkbox" name="setPrimaryEmail" value="PrimaryEmail" checked />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Primary Email</span></span>
+                        </label>
+                      </div>
+                      <div class="checkbox secondary-email">
+                        <label for="setAlternateEmail" class="set-alternate-contact">
+                          <input type="checkbox" name="setAlternateEmail" value="AlternateEmail" />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Alternate Email</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Billing">
+                    <div class="billing">
+                      <div class="checkbox epay-email">
+                        <label for="setEpayEmail" class="set-epay-contact">
+                          <input type="checkbox" name="setEpayEmail" value="EpayEmail" checked />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Epay Email</span></span>
+                        </label>
+                      </div>
+                      <div class="checkbox tds-alert">
+                        <label for="getsTDSalerts1">
+                          <input type="checkbox" name="getsTDSalerts1" value="TDS Alert" checked disabled />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>TDS Alerts</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Data Usage">
+                    <div class="data-usage">
+                    </div>
+                  </td>
+                  <td data-label="Actions">
+                    <div class="actions"><button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="#EmailContactModal">Edit</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Contact">
+                    <div class="contact">testemailaddy@address.com</div>
+                  </td>
+                  <td data-label="Account">
+                    <div class="account">
+                      <div class="checkbox primary-email">
+                        <label for="setPrimaryEmail" class="set-primary-contact">
+                          <input type="checkbox" name="setPrimaryEmail" value="PrimaryEmail" />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Primary Email</span></span>
+                        </label>
+                      </div>
+                      <div class="checkbox secondary-email">
+                        <label for="setAlternateEmail" class="set-alternate-contact">
+                          <input type="checkbox" name="setAlternateEmail" value="AlternateEmail" checked />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Alternate Email</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Billing">
+                    <div class="billing">
+                      <a class="epay-enroll" target="_blank" href="https://tdstelecom.com/support/account/make-payment-epayenrollmentsteps.html">
+                        Enroll in ePay
+                      </a>
+                    </div>
+                  </td>
+                  <td data-label="Data Usage"></td>
+                  <td data-label="Actions">
+                    <div class="actions"><button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="#EmailContactModal">Edit</button><button class="btn btn-primary tds-icon icon-x-left" data-toggle="modal" data-target="#deleteContactModal">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Contact">
+                    <div class="contact">tdsisthebest@tds.net</div>
+                  </td>
+                  <td data-label="Account">
+                    <div class="account">
+                      <div class="checkbox primary-email">
+                        <label for="setPrimaryEmail" class="set-primary-contact">
+                          <input type="checkbox" name="setPrimaryEmail" value="PrimaryEmail" />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Primary Email</span></span>
+                        </label>
+                      </div>
+                      <div class="checkbox secondary-email">
+                        <label for="setAlternateEmail" class="set-alternate-contact">
+                                <input type="checkbox" name="setAlternateEmail" value="AlternateEmail" />
+                                <span class="tds-radio-btn"></span>
+                                <span class="label-text"><span>Alternate Email</span></span>
+                              </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Billing">
+                    <div class="billing">
+                      <div class="checkbox epay-email">
+                        <label for="setEpayEmail" class="set-epay-contact">
+                                <input type="checkbox" name="setEpayEmail" value="EpayEmail">
+                                <span class="tds-radio-btn"></span>
+                                <span class="label-text"><span>Epay Email</span></span>
+                              </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Data Usage">
+                    <div class="data-usage">
+                      <div class="checkbox usage-alert">
+                        <label for="getsUsagealerts1">
+                          <input type="checkbox" name="getsUsagealerts1" value="Usage Alert" checked disabled />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Usage Alerts</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Actions">
+                    <div class="actions"><button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="#EmailContactModal">Edit</button> <button class="btn btn-primary tds-icon icon-x-left" data-toggle="modal" data-target="#deleteContactModal">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- END .current-contact-section.email -->
+
+          <div class="current-contact-section phone">
+            <h2>Phone Contacts</h2>
+            <div id="current-contact-phone-table_filter" class="dataTables_filter"><label>Search Phone Contacts<input type="search" class="" placeholder="" aria-controls="current-contact-phone-table"></label></div>
+            <table id="current-contact-phone-table" class="table tds-responsive-table" style="" role="grid">
+              <thead>
+                <tr role="row">
+                  <th>Contact</th>
+                  <th><button class="btn btn-link icon-img" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="General notifications regarding your service and account.">Account<img class="btn-icon" src="../static/images/ui/alerts/icon_alert-information.svg" alt="More information about Account" height="14" width="14"></button></th>
+                  <th><button class="btn btn-link icon-img" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="Notifications about your bill and payments. Note: ePay customers will receive select notifications via email from ePay.">Billing<img class="btn-icon" src="../static/images/ui/alerts/icon_alert-information.svg" alt="More information about Billing" height="14" width="14"></button></th>
+                  <th><button class="btn btn-link icon-img" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="Notifications related to your monthly Internet usage.">Data Usage<img class="btn-icon" src="../static/images/ui/alerts/icon_alert-information.svg" alt="More information about Data Usage" height="14" width="14"></button></th>
+                  <th><button class="btn btn-link icon-img" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="Primary and ePay contacts cannot be deleted without first designating a different Primary or ePay contact.">Actions<img class="btn-icon" src="../static/images/ui/alerts/icon_alert-information.svg" alt="More information about Data Usage" height="14" width="14"></button></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Contact">
+                    <div class="contact">123-123-1234</div>
+                  </td>
+                  <td data-label="Account">
+                    <div class="account">
+                      <div class="checkbox primary-phone">
+                        <label for="setPrimaryPhone" class="set-primary-contact">
+                          <input type="checkbox" name="setPrimaryPhone" value="PrimaryPhone" checked />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Primary Phone</span></span>
+                        </label>
+                      </div>
+                      <div class="checkbox secondary-phone">
+                        <label for="setAlternatePhone" class="set-alternate-contact">
+                          <input type="checkbox" name="setAlternatePhone" value="SecondaryPhone" />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Alternate Phone</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Billing">
+                    <div class="billing">
+                      <div class="checkbox tds-alert">
+                        <label for="getsTDSalerts2">
+                          <input type="checkbox" name="getsTDSalerts2" value="TDS Alert" checked disabled />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>TDS Alerts</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Data Usage">
+                    <div class="data-usage">
+                      <button class="btn btn-link icon-img img-left" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="This telephone number has been opted out. Please text START to [Short Code] to opt back in."><img class="btn-icon" src="../static/images/ui/alerts/icon_alert-warning.svg" alt="More information about being Opted Out" height="18" width="18"><span>Opted Out</span></button>
+                    </div>
+                  </td>
+                  <td data-label="Actions">
+                    <div class="actions"><button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="#PhoneContactModal">Edit</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Contact">
+                    <div class="contact">555-555-1234</div>
+                  </td>
+                  <td data-label="Account">
+                    <div class="account">
+                      <div class="checkbox primary-phone">
+                        <label for="setPrimaryPhone" class="set-primary-contact">
+                          <input type="checkbox" name="setPrimaryPhone" value="PrimaryPhone" >
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Primary Phone</span></span>
+                        </label>
+                      </div>
+                      <div class="checkbox secondary-phone">
+                        <label for="setAlternatePhone" class="set-alternate-contact">
+                          <input type="checkbox" name="setAlternatePhone" value="SecondaryPhone" checked />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Alternate Phone</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Billing">
+                    <div class="billing">
+                      <div class="checkbox tds-alert">
+                        <label for="getsTDSalerts3">
+                          <input type="checkbox" name="getsTDSalerts3" value="TDS Alert" checked disabled />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>TDS Alerts</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Data Usage"></td>
+                  <td data-label="Actions">
+                    <div class="actions"><button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="#PhoneContactModal">Edit</button><button class="btn btn-primary tds-icon icon-x-left" data-toggle="modal" data-target="#deleteContactModal">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Contact">
+                    <div class="contact">608-123-2214</div>
+                  </td>
+                  <td data-label="Account">
+                    <div class="account">
+                      <div class="checkbox primary-phone">
+                        <label for="setPrimaryPhone" class="set-primary-contact">
+                                <input type="checkbox" name="setPrimaryPhone" value="PrimaryPhone" />
+                                <span class="tds-radio-btn"></span>
+                                <span class="label-text"><span>Primary Phone</span></span>
+                              </label>
+                      </div>
+                      <div class="checkbox secondary-phone">
+                        <label for="setAlternatePhone" class="set-alternate-contact">
+                                <input type="checkbox" name="setAlternatePhone" value="SecondaryPhone" />
+                                <span class="tds-radio-btn"></span>
+                                <span class="label-text"><span>Alternate Phone</span></span>
+                              </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Billing">
+
+                  </td>
+                  <td data-label="Data Usage">
+                    <div class="data-usage">
+                      <div class="checkbox usage-alert">
+                        <label for="getsUsagealerts1">
+                          <input type="checkbox" name="getsUsagealerts1" value="Usage Alert" checked disabled />
+                          <span class="tds-radio-btn"></span>
+                          <span class="label-text"><span>Usage Alerts</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-label="Actions">
+                    <div class="actions"><button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="#PhoneContactModal">Edit</button> <button class="btn btn-primary tds-icon icon-x-left" data-toggle="modal" data-target="#deleteContactModal">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- END .current-contact-section.phone -->
+
+          <!-- START EmailContactModal Modal -->
+          <section id="EmailContactModal" class="modal fade" role="dialog">
+            <div class="modal-dialog tds-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title">Add New / Edit Email Contact</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close Modal">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="alert alert-critical">
+                    <p class="alert-instructions">To proceed, please fix the following error(s):</p>
+                    <ul id="errorList">
+                      <li>Please enter your email address.</li>
+                    </ul>
+                  </div>
+
+                  <div class="contact-email card bg-lt-gray">
+                    <div class="card-body">
+                      <!-- if user is adding an email address -->
+                      <h3>What email address would you like to add?</h3>
+                      <!-- if user is EDITING an email address -->
+                      <h3>You’re making changes to:</h3>
+
+                      <!-- example of adding ".has-error" class to form-group if there's an error -->
+                      <div class="form-group has-error">
+                        <label for="id_contactemail" class="label-position top ">Contact Email</label>
+                        <input aria-describedby="id_contactemail-error" aria-required="true" class="form-control email" id="id_contactemail" name="contactemail" type="email" required="">
+                        <span id="id_contactemail-error" for="id_contactemail" class="help-block" aria-live="polite" style="display: block;">Please enter your email address.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="notifications card bg-lt-gray">
+                    <div class="card-body">
+                      <p class="h3">Which notifications would you like emailed to this address?</p>
+                      <div class="alert alert-info">
+                        Primary contacts automatically receive service and account notifications.
+                      </div>
+                      <div class="billing-section">
+                        <p class="h4">Billing</p>
+                        <div class="form-group">
+                          <div class="checkbox">
+                            <label for="sendEmailBillingNotifications">
+                              <input name="sendEmailBillingNotifications" id="sendEmailBillingNotifications" type="checkbox">
+                              <span class="tds-radio-btn"></span>
+                              <span class="label-text"><span>I’d like to receive TDS reminders and alerts about my bill and payments. </span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <p class="tds-note">
+                          Take note: TDS ePay enrollees will receive separate email notifications about your bill and payment.</a>.
+                        </p>
+                      </div>
+                      <!-- END .billing-section div -->
+                      <div class="data-usage-section">
+                        <p class="h4">Data Usage</p>
+                        <!-- START if user only has one UBB account -->
+                        <div class="form-group">
+                          <div class="checkbox">
+                            <label for="sendEmailDataNotifications">
+                              <input name="sendEmailDataNotifications" id="sendEmailDataNotifications" type="checkbox" class="data-check">
+                              <span class="tds-radio-btn"></span>
+                              <span class="label-text"><span>I’d like to receive alerts about my monthly Internet usage.</span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <!-- END if user only has one UBB account -->
+                        <!-- START if user has two+ UBB accounts -->
+                        <div class="form-group">
+                          <label>Select which account(s) you want to receive monthly Internet usage alerts about:</label>
+                          <div class="checkbox">
+                            <label for="emailAccountUser1">
+                              <input type="checkbox" name="emailAccountUser1" id="emailAccountUser1" class="data-check">
+                              <span class="tds-radio-btn"></span>
+                              <span class="label-text"><span>user@tds.net</span></span>
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label for="emailAccountUser2">
+                              <input type="checkbox" name="emailAccountUser2" id="emailAccountUser2" class="data-check">
+                              <span class="tds-radio-btn"></span>
+                              <span class="label-text"><span>email@yahoo.com</span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <!-- END if user has two+ UBB accounts -->
+                        <div id="dataThresholds" class="thresholds card bg-white">
+                          <div class="card-body">
+                            <div class="alert alert-warning">
+                                <p>Changing these thresholds will also apply to all other contacts that are signed up for data usage alerts.</p>
+                            </div>
+                            <div class="form-group">
+                              <p>Alerts will be sent to your email address when your monthly Internet usage reaches 90% and 100%. To receive additional alerts, select additional thresholds:</p>
+                              <div class="checkbox form-check-inline">
+                                <label for="threshold50">
+                                  <input type="checkbox" name="threshold50" id="threshold50">
+                                  <span class="tds-radio-btn"></span>
+                                  <span class="label-text"><span>50%</span></span>
+                                </label>
+                              </div>
+                              <div class="checkbox form-check-inline">
+                                <label for="threshold75">
+                                  <input type="checkbox" name="threshold75" id="threshold75">
+                                  <span class="tds-radio-btn"></span>
+                                  <span class="label-text"><span>75%</span></span>
+                                </label>
+                              </div>
+                              <div class="checkbox form-check-inline">
+                                <label for="threshold90">
+                                  <input type="checkbox" name="threshold90" id="threshold90" checked disabled>
+                                  <span class="tds-radio-btn"></span>
+                                  <span class="label-text"><span>90%</span></span>
+                                </label>
+                              </div>
+                              <div class="checkbox form-check-inline">
+                                <label for="threshold95">
+                                  <input type="checkbox" name="threshold95" id="threshold95">
+                                  <span class="tds-radio-btn"></span>
+                                  <span class="label-text"><span>95%</span></span>
+                                </label>
+                              </div>
+                              <div class="checkbox form-check-inline">
+                                <label for="threshold100">
+                                  <input type="checkbox" name="threshold100" id="threshold100" checked disabled>
+                                  <span class="tds-radio-btn"></span>
+                                  <span class="label-text"><span>100%</span></span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- END data thresholds card -->
+                      </div>
+                      <!-- END .data-usage-section div -->
+                    </div>
+                  </div>
+                  <div class="alert alert-info">
+                      <p>To stop notifications, uncheck the selected boxes.</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary primary-cta" data-dismiss="modal">Add New/Edit Email Contact</button>
+                  <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END EmailContactModal Modal -->
+
+          <!-- START PhoneContactModal Modal -->
+          <section id="PhoneContactModal" class="modal fade" role="dialog">
+            <div class="modal-dialog tds-modal">
+
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title">Add New/Edit Phone Number Contact</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close Modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class="alert alert-critical">
+                    <p class="alert-instructions">To proceed, please fix the following error(s):</p>
+                    <ul id="errorList">
+                      <li>Please enter a valid phone number.</li>
+                      <li>Please select a phone number type.</li>
+                    </ul>
+                  </div>
+                  <div class="card bg-lt-gray">
+                    <div class="card-body">
+
+                      <h3>What type of number is it?</h3>
+
+                      <div class="form-group">
+
+                        <div class="landlineForm-wrap">
+                          <div class="radio">
+                            <label for="LandlinePhoneContact">
+                                <input type="radio" name="phoneNumberType" id="LandlinePhoneContact" value="phoneTypeLandline">
+                                <span class="tds-radio-btn"></span>
+                                <span class="label-text">Landline</span>
+                              </label>
+                          </div>
+                          <div id="landlinePhoneNumber-wrap" class="form-suboption">
+                            <!-- add "has-error" to form-group if there's an error -->
+                            <div class="form-group has-error">
+                              <label for="landlinePhonNumber"><span class="sr-only">Landline </span>Phone Number</label>
+                              <input class="form-control phone" name="landlinePhoneNumber" id="landlinePhoneNumber" type="phone">
+                              <span class="help-block" id="landlinePhoneNumber-error" style="display: block;">Please enter a valid landline phone number.</span>
+                            </div>
+                          </div>
+                          <!-- .landlinePhoneNumber-wrap -->
+                        </div>
+                        <!-- END .landlineFormWrap -->
+
+                        <div class="mobileForm-wrap">
+                          <div class="radio">
+                            <label for="mobilePhoneContact">
+                                <input type="radio" name="phoneNumberType" id="mobilePhoneContact" value="phoneTypeMobile">
+                                <span class="tds-radio-btn"></span>
+                                <span class="label-text">Mobile</span>
+                            </label>
+                          </div>
+                          <div id="mobilePhoneNumber-wrap" class="form-suboption">
+                            <div class="form-group">
+                              <label for="mobilePhoneNumber"><span class="sr-only">Mobile </span>Phone Number</label>
+                              <input class="form-control phone" name="phoneNumberType" id="mobilePhoneNumber" type="phone">
+                              <span id="mobilePhoneNumber-error" for="mobilePhoneNumber" class="help-block" aria-live="polite" style="display: none;">Please enter a valid mobile phone number.</span>
+                            </div>
+                            <p>
+                              By checking these boxes, I give TDS permission to use an automated system to contact me and understand standard messaging rates may apply. TDS is not responsible for those charges.
+                            </p>
+                            <div class="form-group form-suboption" id="mobileAutoTextAgree-wrap">
+                              <div class="checkbox card bg-white">
+                                <label for="mobileMarketingAutoTextAgree">
+                                      <input name="mobileMarketingAutoTextAgree" id="mobileMarketingAutoTextAgree" type="checkbox">
+                                      <span class="tds-radio-btn"></span>
+                                        <span class="label-text">
+                                          <span>Yes! I’d like to receive notifications about new offers and services via phone call or text.</span>
+                                        </span>
+                                    </label>
+                              </div>
+                              <div class="checkbox card bg-white">
+                                <label for="mobileAccountAutoTextAgree">
+                                      <input name="mobileOffersAutoTextAgree" id="mobileAccountAutoTextAgree" type="checkbox" checked>
+                                      <span class="tds-radio-btn"></span>
+                                        <span class="label-text">
+                                          <span>Yes! I’d like to receive notifications related to my account or current services via phone call or text.</span>
+                                        </span>
+                                </label>
+                                <div id="mobileAccountNotifications-wrap" class="card bg-lt-gray">
+                                  <div class="card-body">
+
+                                    <p class="h3">Which text message notifications would you like sent to this phone number?</p>
+                                    <div class="alert alert-info">
+                                      Primary contacts automatically receive service and account notifications.
+                                    </div>
+                                    <div class="billing-section">
+                                      <p class="h4">Billing</p>
+                                      <div class="form-group">
+                                        <div class="checkbox">
+                                          <label for="mobileBillingNotifications">
+                                            <input name="mobileBillingNotifications" id="mobileBillingNotifications" type="checkbox">
+                                            <span class="tds-radio-btn"></span>
+                                            <span class="label-text"><span>I’d like to receive TDS reminders and alerts about my bill and payments. </span></span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- END .billing-section div -->
+                                    <div class="data-usage-section">
+                                      <p class="h4">Data Usage</p>
+                                      <!-- START if user only has one UBB account -->
+                                      <div class="form-group">
+                                        <div class="checkbox">
+                                          <label for="mobileDataUsageNotifications">
+                                            <input name="mobileDataUsageNotifications" id="mobileDataUsageNotifications" type="checkbox" class="data-check">
+                                            <span class="tds-radio-btn"></span>
+                                            <span class="label-text"><span>I’d like to receive alerts about my monthly Internet usage.</span></span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                      <!-- END if user only has one UBB account -->
+                                      <!-- START if user has two+ UBB accounts -->
+                                      <div class="form-group">
+                                        <label>Select which account(s) you want to receive monthly Internet usage alerts about:</label>
+                                        <div class="checkbox">
+                                          <label for="mobileAccountUser1">
+                                            <input type="checkbox" name="emailAccountUser1" id="mobileAccountUser1" class="data-check">
+                                            <span class="tds-radio-btn"></span>
+                                            <span class="label-text"><span>user@tds.net</span></span>
+                                          </label>
+                                        </div>
+                                        <div class="checkbox">
+                                          <label for="mobileAccountUser2">
+                                            <input type="checkbox" name="emailAccountUser2" id="mobileAccountUser2" class="data-check">
+                                            <span class="tds-radio-btn"></span>
+                                            <span class="label-text"><span>email@yahoo.com</span></span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                      <!-- END if user has two+ UBB accounts -->
+                                      <div id="dataThresholds" class="thresholds card bg-white">
+                                        <div class="card-body">
+                                          <div class="alert alert-warning">
+                                              <p>Changing these thresholds will also apply to all other contacts that are signed up for data usage alerts.</p>
+                                          </div>
+                                          <div class="form-group">
+                                            <p>Alerts will be sent to your email address when your monthly Internet usage reaches 90% and 100%. To receive additional alerts, select additional thresholds:</p>
+                                            <div class="checkbox form-check-inline">
+                                              <label for="threshold50">
+                                                <input type="checkbox" name="threshold50" id="threshold50">
+                                                <span class="tds-radio-btn"></span>
+                                                <span class="label-text"><span>50%</span></span>
+                                              </label>
+                                            </div>
+                                            <div class="checkbox form-check-inline">
+                                              <label for="threshold75">
+                                                <input type="checkbox" name="threshold75" id="threshold75">
+                                                <span class="tds-radio-btn"></span>
+                                                <span class="label-text"><span>75%</span></span>
+                                              </label>
+                                            </div>
+                                            <div class="checkbox form-check-inline">
+                                              <label for="threshold90">
+                                                <input type="checkbox" name="threshold90" id="threshold90" checked disabled>
+                                                <span class="tds-radio-btn"></span>
+                                                <span class="label-text"><span>90%</span></span>
+                                              </label>
+                                            </div>
+                                            <div class="checkbox form-check-inline">
+                                              <label for="threshold95">
+                                                <input type="checkbox" name="threshold95" id="threshold95">
+                                                <span class="tds-radio-btn"></span>
+                                                <span class="label-text"><span>95%</span></span>
+                                              </label>
+                                            </div>
+                                            <div class="checkbox form-check-inline">
+                                              <label for="threshold100">
+                                                <input type="checkbox" name="threshold100" id="threshold100" checked disabled>
+                                                <span class="tds-radio-btn"></span>
+                                                <span class="label-text"><span>100%</span></span>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- END data thresholds card -->
+                                    </div>
+                                    <!-- END .data-usage-section div -->
+
+                                  </div>
+                                </div>
+                                <!-- END #mobileAccountNotifications-wrap div -->
+                              </div>
+
+                            </div>
+                            <!-- END #mobileAutoTextAgree-wrap -->
+                          </div>
+                          <!-- END #mobilePhoneNumber-wrap -->
+
+                          <span class="help-block" id="phoneNumberType-error" style="display: none;">Please select a telephone number type.</span>
+                        </div>
+                        <!-- END .mobileFormWrap -->
+
+                        <span id="phoneType-error" class="help-block" aria-live="polite" style="display: block;">Please select the type of phone number you have.</span>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alert alert-info">
+                      <p>To stop notifications, uncheck the selected boxes.</p>
+                  </div>
+                </div><!-- END .modal-body -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary primary-cta" data-dismiss="modal">Add New/Edit Phone Contact</button>
+                  <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <!-- END PhoneContactModal Modal -->
+
+          <section id="setPrimaryContactModal" class="modal fade confirmationModal" role="dialog">
+            <div class="modal-dialog tds-modal">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="modal-title h2">Are you sure you want to make this the Primary [Email/Phone]?</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close Modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Primary contacts automatically receive service and account-related notifications.
+                  </p>
+                  <p>
+                    <span class="text-uppercase">New</span> Primary [Email/Phone]: <span class="font-weight-bold">XXXX</span>
+                  </p>
+                  <p>
+                    <span class="text-uppercase">Old</span> Primary [Email/Phone]: <span class="font-weight-bold">XXXX</span>
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary primary-cta" data-dismiss="modal">Confirm Primary [Phone/Email]</button>
+                  <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END #setPrimaryContactModal Modal -->
+
+          <section id="setAlternateContactModal" class="modal fade confirmationModal" role="dialog">
+            <div class="modal-dialog tds-modal">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="modal-title h2">Are you sure you want to make this the Alternate [Email/Phone]?</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close Modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Alternate contacts are used in the event you can’t be reached at the primary contact.
+                  </p>
+                  <p>
+                    <span class="text-uppercase">New</span> Alternate [Email/Phone]: <span class="font-weight-bold">XXXX</span>
+                  </p>
+                  <p>
+                    <span class="text-uppercase">Old</span> Alternate [Email/Phone]: <span class="font-weight-bold">XXXX</span>
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary primary-cta" data-dismiss="modal">Confirm Alternate [Phone/Email]</button>
+                  <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END #setAlternateContactModal Modal -->
+
+          <section id="setEpayContactModal" class="modal fade confirmationModal" role="dialog">
+            <div class="modal-dialog tds-modal">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="modal-title h2">Are you sure you want to change your ePay email?</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close Modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Each month, this email receives an electronic bill along with automatic bill payment reminders from ePay.
+                  </p>
+                  <p>
+                    <span class="text-uppercase">New</span>ePay email: <span class="font-weight-bold">XXXX</span>
+                  </p>
+                  <p>
+                    <span class="text-uppercase">Old</span> ePay email: <span class="font-weight-bold">XXXX</span>
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary primary-cta" data-dismiss="modal">Change ePay Email</button>
+                  <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END #setEpayContactModal Modal -->
+
+          <section id="deleteContactModal" class="modal fade confirmationModal delete" role="dialog">
+            <div class="modal-dialog tds-modal">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="modal-title h2">Are you sure you want to delete [phone/email]?</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close Modal">&times;</button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary primary-cta" data-dismiss="modal">Yes, I'm sure</button>
+                  <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END .modal.confirmationModal Modal -->
+
+        </div>
+        <!-- END .contact-preferences-plugin -->
+
+      </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="../static/js/jquery-3.5.1.min.js" charset="utf-8"></script>
+    <script src="../static/js/jquery-input-mask-phone-number.js" charset="utf-8"></script>
+    <script src="../static/js/bootstrap/bootstrap.bundle.min.js" charset="utf-8"></script>
+
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover();
+        $('body').on('click', function(e) {
+          $('[data-toggle="popover"]').each(function() {
+            //the 'is' for buttons that trigger popups
+            //the 'has' for icons within a button that triggers a popup
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              $(this).popover('hide');
+            }
+          });
+        });
+      })
+
+      $(function(){
+        $('.form-control.phone').usPhoneFormat({
+          format:'xxx-xxx-xxxx'
+        });
+      });
+
+      $(function () {
+
+        $('.set-primary-contact').click(function() {
+          $('#setPrimaryContactModal').modal('toggle');
+        });
+        $('.set-alternate-contact').click(function() {
+          $('#setAlternateContactModal').modal('toggle');
+        });
+        $('.set-epay-contact').click(function() {
+          $('#setEpayContactModal').modal('toggle');
+        });
+
+      });
+    </script>
+
+  </body>
+</html>

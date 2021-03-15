@@ -19,24 +19,26 @@ button {
 
 .h1,
 h1 {
-  font-size: 36px;
+  //font-size: 36px;
   color: $tds-dk-blue;
+  font-weight: normal;
+  border-bottom: solid 2px $tds-gray;
 }
 
 .h2,
 h2 {
-  font-size: 28px;
+  //font-size: 28px;
   color: $tds-dk-blue;
 }
 @media (max-width: 584px) {
   h2 {
-    font-size: 24px;
+    //font-size: 24px;
   }
 }
 
 .h3,
 h3 {
-  font-size: 24px;
+  //font-size: 24px;
   color: $tds-lt-blue;
 }
 
@@ -59,43 +61,33 @@ h6 {
 }
 @media (max-width: 584px) {
   h2 {
-    font-size: 21px;
+    //font-size: 21px;
     margin-bottom: 8px;
   }
 
   h3 {
-    font-size: 18px;
+    //font-size: 18px;
     margin-bottom: 8px;
   }
 
   h4 {
-    font-size: 16px;
+    //font-size: 16px;
     margin-bottom: 8px;
   }
 }
 // p or li or main body copy
 
 p {
-  line-height: 1.65em;
-  font-size: 14px;
-  margin: 0 0 10px;
+  //line-height: 1.65em;
+  //font-size: 14px;
+  //margin: 0 0 10px;
   color: $tds-dk-gray;
 }
 
-a {
-  color: $tds-lt-blue-100;
-  text-decoration: underline;
+.bg-lt-gray p {
+  color: $tds-black;
 }
 
-a:focus,
-a:hover {
-  text-decoration: none;
-  color: $tds-blue-100;
-}
-
-a strong {
-  color: inherit;
-}
 // Note messaging
 .tds-note {
   font-size: 11px;
@@ -117,7 +109,7 @@ a strong {
 
 .is-emphasized {
   font-size: 18px;
-  color: #0c8fd0;
+  color: $tds-lt-blue-100;
   margin-top: 12px;
 }
 /* END typography.scss */

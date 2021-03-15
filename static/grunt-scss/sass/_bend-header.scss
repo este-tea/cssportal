@@ -99,7 +99,7 @@ ul#header-contact-links {
     ul {
       border-top: solid 4px #cc5f00;
       li {
-        background: $tds-dk-gray-80 url(../images/checkers-dark.gif) left top repeat;
+        background: $tds-gray-dkr-30 url(../images/checkers-dark.gif) left top repeat;
         &:last-child {
           border-bottom: none;
         }
@@ -123,7 +123,7 @@ ul#header-contact-links {
         a {
           font-weight: 500;
           color: $tds-white;
-          background: $tds-dk-gray-80 url(../images/checkers-dark.gif) left top repeat;
+          background: $tds-gray-dkr-30 url(../images/checkers-dark.gif) left top repeat;
           border-bottom: 1px solid $tds-orange;
           padding: 6px 16px;
           margin: 0;
