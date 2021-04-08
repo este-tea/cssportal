@@ -5,7 +5,8 @@ footer {
   background-color: $tds-dk-gray;
   text-align: center;
   border-top: solid 4px $tds-dkr-gray;
-  padding: 36px 20px 0 20px;
+  padding: 0;
+  margin-top: 40px;
   .phone {
     color: white;
     font-weight: 500;
@@ -51,17 +52,16 @@ footer {
         li {
           display: block;
           text-align: center;
-          &:first-child {
-            a {
-              border-top: solid 1px $tds-lt-gray;
-            }
-          }
-
           a {
             display: block;
             padding: 16px;
             border-right: none;
-            border-bottom: solid 1px $tds-lt-gray;
+            border-bottom: solid 1px $tds-gray-dkr-30;
+          }
+          &:last-child {
+            a {
+              border-bottom: none;
+            }
           }
         }
     }
@@ -71,9 +71,24 @@ footer {
     font-size: 0.75em;
     line-height: 1.5em;
     color: $tds-lt-gray;
-    margin: 24px 16px 0 16px;
+    margin: 0;
   }
 }
-
+.container.copyright-wrap {
+    background-color: #353535;
+    padding: 24px;
+    margin: 0;
+    width: 100%;
+    max-width: initial;
+}
+.container-fluid.footer-links-wrap {
+    padding: 36px 20px;
+    @media (max-width:$screen-xxs) {
+      padding: 0;
+      .footer-links {
+        margin: 0;
+      }
+    }
+}
 
 /* END footer.scss */

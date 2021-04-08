@@ -8085,6 +8085,7 @@ h1 {
   color: #19388A;
   font-weight: normal;
   border-bottom: solid 2px #CCCCCC;
+  margin-top: 24px;
 }
 
 .h2,
@@ -8658,6 +8659,10 @@ img.btn-icon {
 /* END alerts.scss */
 /* tds-cards
 ==========================================*/
+.card-deck {
+  margin-bottom: 24px;
+}
+
 .card {
   margin-bottom: 28px;
   border: 3px solid #e9e9e9;
@@ -8708,77 +8713,35 @@ img.btn-icon {
   border: none;
 }
 
-h2.card-title {
+.bg-dk-gray,
+.card .card.bg-dk-gray {
+  background-color: #555555;
+  border-color: #555555;
+}
+
+.bg-dk-gray .card-header, .bg-dk-gray .card-header h2, .bg-dk-gray .card-body,
+.card .card.bg-dk-gray .card-header,
+.card .card.bg-dk-gray .card-header h2,
+.card .card.bg-dk-gray .card-body {
+  color: white;
+}
+
+.card-header, .card-header h2 {
   font-size: 24px;
   text-align: center;
-  margin-bottom: 12px;
-  color: #777777;
-}
-
-.card.card-gray h2 {
+  margin: 0 auto;
   color: #19388A;
-}
-
-.card-title > a {
-  color: #19388a;
-  text-decoration: none;
-  display: block;
-}
-
-.card-content h3 {
-  color: #0c8fd0;
-}
-
-.card-content h1,
-.card-content h2,
-.card-content h3,
-.card-content p {
-  color: #353535;
-}
-
-.colorBlock .tds-block-dk-blue .card,
-.colorBlock .tds-block-dk-gray .card,
-.colorBlock .tds-block-lt-blue .card,
-.colorBlock .tds-block-orange .card,
-.pagelayout .tds-block-dk-blue .card,
-.pagelayout .tds-block-dk-gray .card,
-.pagelayout .tds-block-lt-blue .card,
-.pagelayout .tds-block-orange .card {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.tds-block-lt-gray .card {
-  background-color: #fff;
-}
-
-.pagedivision .card.contact-card-form,
-.pagedivision .card.card-gray,
-.pagelayout .card.contact-card-form,
-.pagelayout .card.card-gray {
-  background-color: #e3e3e3;
-}
-
-.pagedivision .card.card-plain,
-.pagelayout .card.card-plain {
   background: none;
+  border-bottom: none;
+  font-family: "ITC Avant Garde Gothic W01", "Century Gothic", Arial, serif;
+  font-weight: 500;
 }
 
-.ch-filler {
-  display: inline-block;
-}
-
-@media screen and (max-width: 580px) {
-  .ch-filler {
-    display: none;
-  }
-}
-
-.parbase.productavailcta.section .tds-alert {
-  clear: both;
-}
-
-.parbase.referralProgram.section .tds-single-card .gallery-grid li {
-  padding: 0;
+.card-body h1,
+.card-body h2,
+.card-body h3,
+.card-body p {
+  color: #353535;
 }
 
 /* END tds-cards.scss */
@@ -9486,7 +9449,8 @@ footer {
   background-color: #555555;
   text-align: center;
   border-top: solid 4px #353535;
-  padding: 36px 20px 0 20px;
+  padding: 0;
+  margin-top: 40px;
 }
 
 footer .phone {
@@ -9540,14 +9504,14 @@ footer .footer-links li:last-child a {
     display: block;
     text-align: center;
   }
-  footer .footer-links li:first-child a {
-    border-top: solid 1px #e9e9e9;
-  }
   footer .footer-links li a {
     display: block;
     padding: 16px;
     border-right: none;
-    border-bottom: solid 1px #e9e9e9;
+    border-bottom: solid 1px #777777;
+  }
+  footer .footer-links li:last-child a {
+    border-bottom: none;
   }
 }
 
@@ -9555,7 +9519,28 @@ footer .copyright {
   font-size: 0.75em;
   line-height: 1.5em;
   color: #e9e9e9;
-  margin: 24px 16px 0 16px;
+  margin: 0;
+}
+
+.container.copyright-wrap {
+  background-color: #353535;
+  padding: 24px;
+  margin: 0;
+  width: 100%;
+  max-width: initial;
+}
+
+.container-fluid.footer-links-wrap {
+  padding: 36px 20px;
+}
+
+@media (max-width: 400px) {
+  .container-fluid.footer-links-wrap {
+    padding: 0;
+  }
+  .container-fluid.footer-links-wrap .footer-links {
+    margin: 0;
+  }
 }
 
 /* END footer.scss */

@@ -2,10 +2,12 @@
 ==========================================*/
 // https://getbootstrap.com/docs/4.0/components/card/
 
+.card-deck {
+    margin-bottom: 24px;
+}
+
 .card {
     margin-bottom: 28px;
-    //padding: 24px;
-    //background-color: $tds-white;
     border: 3px solid $tds-lt-gray;
     h2,
     h3 {
@@ -14,7 +16,6 @@
     h3 {
         font-size: 1.5em;
     }
-    // align blue `ul` squares in cards to the left
     ul {
         padding-left: 20px;
         li {
@@ -50,40 +51,39 @@
     border: none;
 }
 
+.bg-dk-gray,
+.card .card.bg-dk-gray {
+    background-color: $tds-dk-gray;
+    border-color: $tds-dk-gray;
+    .card-header, .card-header h2, .card-body {
+      color: white;
+    }
+}
+
 // Card Layouts
 // -----------------------
 
 
 // Card Headings
 // -----------------------
-h2.card-title {
+.card-header, .card-header h2 {
     font-size: 24px;
     text-align: center;
-    margin-bottom: 12px;
-    color: $tds-gray-dkr-30;
-}
-.card.card-gray {
-    h2 {
-        color: $tds-blue-100;
-    }
-}
-
-.card-title > a {
-    color: #19388a;
-    text-decoration: none;
-    display: block;
-}
-.card-content h3 {
-    color: #0c8fd0;
+    margin: 0 auto;
+    color: $tds-blue-100;
+    background: none;
+    border-bottom: none;
+    font-family: $tds-font-family;
+    font-weight: 500;
 }
 
 // Card Image
 // -----------------------
 
 
-// Card Content
+// Card Body
 // -----------------------
-.card-content {
+.card-body {
     h1,
     h2,
     h3,
@@ -92,52 +92,4 @@ h2.card-title {
     }
 }
 
-// Card Background Color
-// -----------------------
-.colorBlock .tds-block-dk-blue .card,
-.colorBlock .tds-block-dk-gray .card,
-.colorBlock .tds-block-lt-blue .card,
-.colorBlock .tds-block-orange .card,
-.pagelayout .tds-block-dk-blue .card,
-.pagelayout .tds-block-dk-gray .card,
-.pagelayout .tds-block-lt-blue .card,
-.pagelayout .tds-block-orange .card {
-    background-color: rgba(255,255,255,.80);
-}
-.tds-block-lt-gray .card {
-    background-color: #fff;
-}
-.pagedivision .card.contact-card-form,
-.pagedivision .card.card-gray,
-.pagelayout .card.contact-card-form,
-.pagelayout .card.card-gray {
-    background-color: #e3e3e3;
-}
-.pagedivision .card.card-plain,
-.pagelayout .card.card-plain {
-    background: none;
-}
-// Tweaks
-
-.ch-filler {
-    display: inline-block;
-}
-
-@media screen and (max-width: 580px) {
-    .ch-filler {
-    display: none;
-    }
-}
-
- // 1 gig page alert cover page content in small form*/
-.parbase.productavailcta.section .tds-alert {
-    clear: both;
-}
-
-// moved to _tds-trouble-reporting-form.scss
-
-//HYDRA-2183 Styling: Referral Page spacing and alignment issues
-.parbase.referralProgram.section .tds-single-card .gallery-grid li {
- padding:0;
-}
 /* END tds-cards.scss */
