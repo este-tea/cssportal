@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/portal_style.css">
+    <title>CSS Portal</title>
+  </head>
+  <body>
+    <div class="skip-nav">
+      <a href="#content" tabindex="0" class="btn btn-primary tds-icon icon-arrow-right">Skip to main content</a>
+    </div>
+    <header class="sticky-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#" id="tds-logo"><span class="sr-only">TDS Logo</span></a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+            </button>
+          <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Account Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">View/Pay Bill</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact-preferences.html">Contact Preferences</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="users-security.html">Users & Security</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="content">
+      <div class="container-fluid">
+
+        <div class="user-greeting-plugin">
+          <div class="alert alert-greeting">
+              <p>You are logged in as <b>exampleuser1234@tds.net</b>. Your location is <b>Madison, WI</b>. <a href="#" class="inline-block">Log Out</a></p>
+          </div>
+        </div>
+
+        <h1>Users & Security</h1>
+
+        <div class="page-layout-plugin">
+          <div class="row">
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- END .container-fluid -->
+
+    </div>
+    <!-- END #content -->
+
+    <footer class="footer">
+      <div class="container-fluid footer-links-wrap">
+        <ul class="footer-links">
+          <li>
+            <a href="index.html" target="_blank">My Account Home</a>
+          </li>
+          <li>
+            <a href="https://tdstelecom.com/" target="_blank">tdstelecom.com</a>
+          </li>
+          <li>
+            <a href="https://tdstelecom.com/policies/privacy-policy.html" target="_blank">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="https://tdstelecom.com/policies/terms-of-service.html" target="_blank">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container copyright-wrap">
+        <p class="copyright">Copyright ©2021, TDS Telecommunications LLC. <span style="display:inline-block;">All Rights Reserved.</span></p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../static/js/jquery-3.5.1.min.js" charset="utf-8"></script>
+    <script src="../static/js/popper.min.js" charset="utf-8"></script>
+    <script src="../static/js/bootstrap/bootstrap.min.js" charset="utf-8"></script>
+
+    <script>
+      $(document).ready(function() {
+
+        var $currentContactEmailTable = $('#current-contact-email-table');
+        var currentContactEmailTable = $currentContactEmailTable.DataTable({
+          //"paging": false,
+          "order": [],
+          //"info": false,
+          "dom": '<ft>',
+          "language": {
+            "zeroRecords": "We're sorry. The contact you're trying to find is not in our records.",
+            "search": "Search Email Contacts"
+          }
+        });
+
+        var $currentContactPhoneTable = $('#current-contact-phone-table');
+        var currentContactPhoneTable = $currentContactPhoneTable.DataTable({
+          //"paging": false,
+          "order": [],
+          //"info": false,
+          "dom": '<ft>',
+          "language": {
+            "zeroRecords": "We're sorry. The contact you're trying to find is not in our records.",
+            "search": "Search Phone Contacts"
+          }
+        });
+
+        $('#LandlinePhoneContact').click(function() {
+          $("#mobilePhoneNumber-wrap").hide();
+          $("#mobileDataNotifications-wrap").hide();
+          $("#landlinePhoneNumber-wrap").show();
+        });
+
+        $('#mobilePhoneContact').click(function() {
+          $("#landlinePhoneNumber-wrap").hide();
+          $("#mobilePhoneNumber-wrap").show();
+          $("#mobileDataNotifications-wrap").show();
+        });
+
+        $('.justAnExamplePrimary').click(function() {
+          $('#setPrimaryContactModal').modal('toggle');
+        });
+        $('.justAnExample2nd').click(function() {
+          $('#setSecondaryContactModal').modal('toggle');
+        });
+        $('.justAnExampleEpay').click(function() {
+          $('#setEpayContactModal').modal('toggle');
+        });
+
+        $("input:checkbox").on('click', function() {
+          // in the handler, 'this' refers to the box clicked on
+          var $box = $(this);
+          if ($box.is(":checked")) {
+            // the name of the box is retrieved using the .attr() method
+            // as it is assumed and expected to be immutable
+            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+            // the checked state of the group/box on the other hand will change
+            // and the current value is retrieved using .prop() method
+            $(group).prop("checked", false);
+            $box.prop("checked", true);
+          } else {
+            $box.prop("checked", false);
+          }
+        });
+
+        $('[data-toggle="popover"]').popover();
+        $('body').on('click', function(e) {
+          $('[data-toggle="popover"]').each(function() {
+            //the 'is' for buttons that trigger popups
+            //the 'has' for icons within a button that triggers a popup
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              $(this).popover('hide');
+            }
+          });
+        });
+
+      });
+    </script>
+
+  </body>
+</html>
