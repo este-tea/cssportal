@@ -4389,6 +4389,14 @@ tbody.collapse.show {
   border-color: #2c2c2c;
 }
 
+.custom-list-group-item {
+  border: none !important;
+}
+
+.custom-list-group-item-link {
+  border-bottom: none !important;
+}
+
 .close {
   float: right;
   font-size: 1.5rem;
