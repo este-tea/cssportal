@@ -235,8 +235,10 @@ label {
   margin-bottom: .5rem;
 }
 
+.button,
 button {
   border-radius: 0;
+  text-decoration: none;
 }
 
 button:focus {
@@ -244,6 +246,7 @@ button:focus {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
+.button,
 input,
 button,
 select,
@@ -255,11 +258,13 @@ textarea {
   line-height: inherit;
 }
 
+.button,
 button,
 input {
   overflow: visible;
 }
 
+.button,
 button,
 select {
   text-transform: none;
@@ -4913,6 +4918,7 @@ a.bg-info:hover, a.bg-info:focus,
 button.bg-info:hover,
 button.bg-info:focus {
   background-color: #2caff2 !important;
+  color: white;
 }
 
 .bg-warning {
@@ -8071,6 +8077,7 @@ body {
 .h2,
 .h3,
 .h4,
+.button,
 h1,
 h2,
 h3,
