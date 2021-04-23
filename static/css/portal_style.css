@@ -8759,6 +8759,11 @@ img.btn-icon {
   color: #353535;
 }
 
+.card-contact-us-links {
+  color: white;
+  text-decoration: none;
+}
+
 /* END tds-cards.scss */
 /* tds-tables.scss
 ==========================================*/
@@ -9579,6 +9584,20 @@ footer .copyright {
 .thresholds.card .form-group,
 .thresholds.card .form-group label {
   margin-bottom: 0;
+}
+
+/* END plugin-contact_preferences.scss */
+
+/* plugin-index
+==========================================*/
+.account-price {
+  font-size: 2.2rem;
+}
+
+@media (max-width: 575px) {
+  .balance-payments-plugin .card {
+    border: none;
+  }
 }
 
 /* END plugin-contact_preferences.scss */
