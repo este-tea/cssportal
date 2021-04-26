@@ -8764,6 +8764,11 @@ img.btn-icon {
   text-decoration: none;
 }
 
+.card-contact-us-links:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 /* END tds-cards.scss */
 /* tds-tables.scss
 ==========================================*/
