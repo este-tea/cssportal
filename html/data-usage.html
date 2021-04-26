@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../static/css/portal_style.css">
-    <title>CSS Portal</title>
+    <title>Data Usage</title>
   </head>
   <body>
     <div class="skip-nav">
@@ -26,8 +26,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="bill.html">View/Pay Bill</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="services.html">Services</a>
+              <li class="nav-item">
+                <a class="nav-link active" href="services.html">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact-preferences.html">Contact Preferences</a>
@@ -54,6 +54,268 @@
 
         <div class="page-layout-plugin">
           <div class="row">
+
+            <div class="col-lg-9 col-md-12">
+
+              <!-- manage users plugin -->
+              <div class="row">
+                <div class="w-100 px-4">
+
+                  <!-- if user has a data cap -->
+                  <div class="alert alert-warning" role="alert">
+                    <p>Data caps are associated with your current service.</p>
+                  </div>
+                  <!-- END if user has a data cap -->
+
+                  <h2>Usage Details</h2>
+
+                  <p>Peak Hours: 6am - Midnight</p>
+                  <p>Non-Peak Hours: Midnight - 6am</p>
+
+                  <table class="table tds-responsive-table bg-white w-75" role="grid">
+                    <thead>
+                      <tr role="row">
+                        <th>Date</th>
+                        <th>Peak Hours</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            1/22/2021 - 2/22/2021
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            321.24GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            12/22/2020 - 1/22/2021
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            510.82GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            11/22/2020 - 12/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            725.89GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            10/22/2020 - 11/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            426.27GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            9/22/2020 - 10/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            306.75GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            8/22/2020 - 9/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            333.02GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            7/22/2020 - 8/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            758.53GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            6/22/2020 - 7/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            181.83GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            5/22/2020 - 6/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            0.00GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            4/22/2020 - 5/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            0.00GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            3/22/2020 - 4/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            0.00GB
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Date">
+                          <div class="date">
+                            2/22/2020 - 3/22/2020
+                          </div>
+                        </td>
+
+                        <td data-label="Peak">
+                          <div class="peak">
+                            38.38GB
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+
+                  <h2>12-month Rolling Data Usage History</h2>
+                  horizontal bar graph
+
+                </div>
+              </div>
+              <!-- END usage plugin -->
+
+            </div>
+
+            <!-- aside -->
+            <div class="col-lg-3 col-md-12 mt-lg-0 mt-4">
+              <div class="resource-cards card-deck">
+
+                <div class="card col-md">
+                  <div class="card-header d-flex h-100"><h2>Quick Access</h2></div>
+
+                  <div class="card-body text-center pt-0">
+                    <ul class="list-group list-unstyled">
+                      <!-- if user has a data cap -->
+                      <a href="#" class="button btn btn-primary w-100" role="button">Estimate My Data Usage ></a>
+                      <a href="#" class="button btn btn-primary ml-0 my-4 w-100" role="button">Purchase More Data ></a>
+                      <a href="#" class="button btn btn-primary ml-0 mb-3 w-100" role="button">View Usage Notifications ></a>
+                      <!-- END if user has a data cap -->
+                      <li class="list-group-item custom-list-group-item"><a href="#">Make Rush Payment</a></li>
+                      <li class="list-group-item custom-list-group-item"><a href="#">Check My Email</a></li>
+                      <li class="list-group-item custom-list-group-item"><a href="#">Fine My Wi-Fi Password</a></li>
+                      <li class="list-group-item custom-list-group-item"><a href="#">View My Channel Lineup</a></li>
+                      <li class="list-group-item custom-list-group-item"><a href="data-usage.html">View My Data Usage</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="w-100 mt-3"></div>
+
+                <div class="card">
+                  <div class="card-header d-flex h-100"><h2>Support Links</h2></div>
+
+                  <div class="card-body text-center pt-0">
+                    <ul class="list-group list-unstyled">
+                      <li class="list-group-item custom-list-group-item"><a href="#">Internet Support</a></li>
+                      <li class="list-group-item custom-list-group-item"><a href="#">TV Support</a></li>
+                      <li class="list-group-item custom-list-group-item"><a href="#">Phone Support</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="w-100 mb-3"></div>
+
+                <div class="card bg-dk-gray">
+                  <div class="card-header d-flex h-100"><h2>Contact Us!</h2></div>
+
+                  <div class="card-body pt-0">
+                    <ul class="list-group list-unstyled">
+                      <li class="list-group-item bg-dk-gray custom-list-group-item"><a href="#" class="card-contact-us-links">1-855-244-0121</a></li>
+                      <li class="list-group-item bg-dk-gray custom-list-group-item"><a href="https://tdstelecom.com/contactus/residential/chat/chat-splitter.html" class="card-contact-us-links">Chat</a></li>
+                      <li class="list-group-item bg-dk-gray custom-list-group-item"><a href="https://tdstelecom.com/contactus.html" class="card-contact-us-links">Contact Form</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <!-- END aside -->
 
           </div>
 
