@@ -8806,6 +8806,10 @@ img.btn-icon {
   margin-bottom: 1.5em;
 }
 
+.table-single-row {
+  border-top: solid 2px #19388a !important;
+}
+
 @media (min-width: 751px) {
   .tds-responsive-table {
     font-size: 1em;

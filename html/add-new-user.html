@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../static/css/portal_style.css">
-    <title>Users & Security</title>
+    <title>Add New User</title>
   </head>
   <body>
     <div class="skip-nav">
@@ -50,7 +50,7 @@
           </div>
         </div>
 
-        <h1>Users & Security</h1>
+        <h1>Add New User</h1>
 
         <div class="page-layout-plugin">
           <div class="row">
@@ -60,107 +60,72 @@
               <!-- manage users plugin -->
               <div class="row">
                 <div class="w-100 bg-lt-gray px-4">
-                  <h2 class="pt-3">Manage Users</h2>
-                  <p>In this area, only administrators can see the full list of users, change other user's account settings, and add/delete users.</p>
+                  <h2 class="pt-3">Create User Name</h2>
+                  <p>Use your own email address as your TDS user name. This will be used for logging in, accessing, and managing your account and services online.</p>
 
-                    <div class="alert alert-info" role="alert">
-                      <p>Note: Automatic notifications are not sent. You may want to communicate changes you make to affected user(s).</p>
+                  <form>
+                    <div class="form-group">
+                      <label for="emailUserName" class="font-weight-bold"><small>Email Address/New User Name</small></label>
+                      <input type="email" class="form-control w-50" id="emailUserName" aria-describedby="emailHelp">
                     </div>
+                  </form>
 
-                    <table class="table tds-responsive-table bg-white" role="grid">
-                      <thead>
-                        <tr role="row">
-                          <th>User Name</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        <tr>
-                          <td data-label="User">
-                            <div class="user">email@gmail.com (Administrator)</div>
-                          </td>
-
-                          <td data-label="Actions">
-                            <div class="actions">
-                              <a href="edit-user.html" class="button btn btn-primary tds-icon icon-pencil-left" role="button">Edit</a>
-                              <!-- <button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="edit-user.html">Edit</button> -->
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td data-label="User">
-                            <div class="user">bobbyjo@tds.net</div>
-                          </td>
-
-                          <td data-label="Actions">
-                            <div class="actions">
-                              <a href="edit-user.html" class="button btn btn-primary tds-icon icon-pencil-left" role="button">Edit</a>
-                              <!-- <button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="edit-user.html">Edit</button> -->
-                              <button class="btn btn-primary tds-icon icon-x-left" data-toggle="modal" data-target="#deleteContactModal">Delete</button>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td data-label="User"></td>
-
-                          <td data-label="Actions">
-                            <div class="actions">
-                              <a href="add-new-user.html" class="button btn btn-primary tds-icon icon-plus-left" role="button">Add New User</a>
-                              <!-- <button class="btn btn-primary tds-icon icon-plus-left" data-toggle="modal" data-target="add-new-user.html">Add New User</button> -->
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-
-                    </table>
+                  <div class="alert alert-info" role="alert">
+                    <p>To verify you have access to this email account, we'll send you a security code to enter.</p>
+                  </div>
                 </div>
               </div>
               <!-- END manage users plugin -->
 
-              <!-- security plugin -->
+              <!-- account settings plugin -->
               <div class="row">
                 <div class="w-100 bg-lt-gray mt-4 px-4">
-                  <h2 class="pt-3">Security</h2>
+                  <h2 class="pt-3">Account Settings</h2>
 
-                  <div>
-                    <a href="https://login.tds.net/password_reset/" class="button btn btn-primary" role="button">Change Password</a>
-                    <!-- <a href="https://login.tds.net/security_questions/" class="button btn btn-primary" role="button">Change Security Questions</a> -->
-                    <a href="https://login.tds.net/recovery_contact/" class="button btn btn-primary" role="button">Change Recovery Contacts</a>
-                    <a href="https://login.tds.net/change_pin/" class="button btn btn-primary tds-icon icon-lock-left" role="button">Change PIN</a>
-                  </div>
+                    <table class="table tds-responsive-table bg-white" role="grid">
+                      <tbody>
 
-                  <p class="font-italic"><small><strong>Please Note: </strong> you will receive a confirmation letter mailed to your billing address ifyou change your PIN.</small></p>
+                        <tr>
+                          <td class="table-single-row">
+                            Make this use an <button class="btn btn-link icon-img mb-0" type="button" data-placement="bottom" data-toggle="popover" title="" data-content="...">Administrator<img class="btn-icon" src="../static/images/ui/alerts/icon_alert-information.svg" alt="..." height="14" width="14"></button>
+                          </td>
+
+                          <td class="table-single-row">
+                            <div class="form-check-inline radio">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input tds-radio-btn" name="option">
+                                <span class="tds-radio-btn"></span>
+                                <span class="label-text">Yes</span>
+                              </label>
+                            </div>
+
+                            <div class="form-check-inline radio">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input tds-radio-btn" name="option" checked>
+                                <span class="tds-radio-btn"></span>
+                                <span class="label-text">No</span>
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
                 </div>
               </div>
-              <!-- END security plugin -->
+              <!-- END account settings plugin -->
+
+              <div class="row">
+                <div class="w-100 mt-4">
+                  <a href="#" class="button btn btn-primary" role="button"> Add User ></a>
+                </div>
+              </div>
 
             </div>
 
-            <!-- delete modal -->
-            <section id="deleteContactModal" class="modal fade confirmationModal delete" role="dialog">
-              <div class="modal-dialog tds-modal">
-
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <p class="modal-title h2">Are you sure you want to delete this user?</p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close Modal">&times;</button>
-                  </div>
-
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary primary-cta" data-dismiss="modal">Delete User</button>
-                    <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-                  </div>
-                </div>
-
-              </div>
-            </section>
-            <!-- END delete modal -->
-
             <!-- aside -->
-            <div class="col-lg-3 col-md-12 mt-lg-0 mt-4">
+            <div class="col-lg-3 col-md-12 mt-lg-0 mt-2">
               <div class="resource-cards card-deck">
 
                 <div class="card col-md">
@@ -211,7 +176,6 @@
             <!-- END aside -->
 
           </div>
-
         </div>
 
       </div>
