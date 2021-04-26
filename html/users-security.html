@@ -60,7 +60,7 @@
               <!-- manage users plugin -->
               <div class="row">
                 <div class="w-100 bg-lt-gray px-4">
-                  <h2 class="pt-4">Manage Users</h2>
+                  <h2 class="pt-3">Manage Users</h2>
                   <p>In this area, only administrators can see the full list of users, change other user's account settings, and add/delete users.</p>
 
                     <div class="alert alert-info" role="alert">
@@ -96,7 +96,7 @@
                           <td data-label="Actions">
                             <div class="actions">
                               <button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="#">Edit</button>
-                              <button class="btn btn-primary tds-icon icon-x-left" data-toggle="modal" data-target="#">Delete</button>
+                              <button class="btn btn-primary tds-icon icon-x-left" data-toggle="modal" data-target="#deleteContactModal">Delete</button>
                             </div>
                           </td>
                         </tr>
@@ -120,7 +120,7 @@
               <!-- security plugin -->
               <div class="row">
                 <div class="w-100 bg-lt-gray mt-4 px-4">
-                  <h2 class="pt-4">Security</h2>
+                  <h2 class="pt-3">Security</h2>
 
                   <div>
                     <a href="https://login.tds.net/password_reset/" class="button btn btn-primary" role="button">Change Password</a>
@@ -136,8 +136,28 @@
 
             </div>
 
+            <!-- delete modal -->
+            <section id="deleteContactModal" class="modal fade confirmationModal delete" role="dialog">
+              <div class="modal-dialog tds-modal">
+
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <p class="modal-title h2">Are you sure you want to delete this user?</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close Modal">&times;</button>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary primary-cta" data-dismiss="modal">Delete User</button>
+                    <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+            <!-- END delete modal -->
+
             <!-- aside -->
-            <div class="col-lg-3 col-md-12 mt-md-0 mt-4">
+            <div class="col-lg-3 col-md-12 mt-lg-0 mt-4">
               <div class="resource-cards card-deck">
 
                 <div class="card col-md">

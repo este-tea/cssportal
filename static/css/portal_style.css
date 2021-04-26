@@ -9605,4 +9605,19 @@ footer .copyright {
   }
 }
 
-/* END plugin-contact_preferences.scss */
+/* END plugin-index.scss */
+
+/* plugin-users_security
+==========================================*/
+@media (max-width: 651px) {
+  /* change password button */
+  .change-password-btn {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 547px) {
+  /* delete button */
+}
+
+/* END users_security.scss */
