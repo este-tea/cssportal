@@ -66,6 +66,53 @@
                     <div class="alert alert-info" role="alert">
                       <p>Note: Automatic notifications are not sent. You may want to communicate changes you make to affected user(s).</p>
                     </div>
+
+                    <table class="table tds-responsive-table bg-white" role="grid">
+                      <thead>
+                        <tr role="row">
+                          <th>User Name</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td data-label="User">
+                            <div class="user">email@gmail.com (Administrator)</div>
+                          </td>
+
+                          <td data-label="Actions">
+                            <div class="actions">
+                              <button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="#">Edit</button>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="User">
+                            <div class="user">bobbyjo@tds.net</div>
+                          </td>
+
+                          <td data-label="Actions">
+                            <div class="actions">
+                              <button class="btn btn-primary tds-icon icon-pencil-left" data-toggle="modal" data-target="#">Edit</button>
+                              <button class="btn btn-primary tds-icon icon-x-left" data-toggle="modal" data-target="#">Delete</button>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="User"></td>
+
+                          <td data-label="Actions">
+                            <div class="actions">
+                              <button class="btn btn-primary tds-icon icon-plus-left" data-toggle="modal" data-target="#">Add New User</button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+
+                    </table>
                 </div>
               </div>
               <!-- END manage users plugin -->
