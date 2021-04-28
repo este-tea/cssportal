@@ -8442,6 +8442,15 @@ a strong {
   color: inherit;
 }
 
+.buttonCollapse {
+  height: 20px;
+  width: 20px;
+  line-height: 0;
+  border-radius: 50%;
+  font-weight: bold;
+  padding: 0;
+}
+
 /* END buttons-links.scss */
 /* tds-icons
 ==========================================*/

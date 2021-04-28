@@ -63,40 +63,43 @@
 
                   <div class="d-md-flex pt-4 px-4">
                       <h2>My Balance and Payments</h2>
+                      <button class="btn btn-secondary buttonCollapse ml-2 mb-0 mt-2" type="button" data-toggle="collapse" data-target="#multiCollapseBalanceAndPayments" aria-expanded="true" aria-controls="multiCollapseBalanceAndPayments">-</button>
                       <a href="bill.html" class="button btn btn-primary ml-auto mb-4" role="button">View/Pay My Bill</a>
                   </div>
 
-                  <div class="card-group mx-3 mx-md-0 mb-4">
+                  <div class="collapse show multi-collapse" id="multiCollapseBalanceAndPayments">
+                    <div class="card-group mx-3 mx-md-0 mb-4">
 
-                    <div class="card text-center ml-md-4 bg-secondary">
-                      <div class="card-title mx-3 mt-3 mb-0"><h3 class="text-white mb-0">Current Balance</h3></div>
+                      <div class="card text-center ml-md-4 bg-secondary">
+                        <div class="card-title mx-3 mt-3 mb-0"><h3 class="text-white mb-0">Current Balance</h3></div>
 
-                      <div class="card-body">
-                        <p class="text-white account-price"><strong>$110.19</strong></p>
-                        <p class="text-white">Due 2/7/2021</p>
+                        <div class="card-body">
+                          <p class="text-white account-price"><strong>$110.19</strong></p>
+                          <p class="text-white">Due 2/7/2021</p>
+                        </div>
                       </div>
+
+                      <div class="card text-center bg-transparent border-white border-bottom-0 border-top-0">
+                        <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">Pending Payment</h3></div>
+
+                        <div class="card-body">
+                          <p class="account-price"><strong>$0.00</strong></p>
+                        </div>
+                      </div>
+
+                      <div class="card text-center mr-md-4 bg-transparent">
+                        <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">Last Payment</h3></div>
+
+                        <div class="card-body">
+                          <p class="account-price"><strong>$110.19</strong></p>
+                          <p>Processed 1/7/2021</p>
+                        </div>
+                      </div>
+
                     </div>
 
-                    <div class="card text-center bg-transparent border-white border-bottom-0 border-top-0">
-                      <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">Pending Payment</h3></div>
-
-                      <div class="card-body">
-                        <p class="account-price"><strong>$0.00</strong></p>
-                      </div>
-                    </div>
-
-                    <div class="card text-center mr-md-4 bg-transparent">
-                      <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">Last Payment</h3></div>
-
-                      <div class="card-body">
-                        <p class="account-price"><strong>$110.19</strong></p>
-                        <p>Processed 1/7/2021</p>
-                      </div>
-                    </div>
-
+                    <p class="font-italic mx-4"><small><strong>Please note: Current Balance</strong> reflects the amount due as of today's date and may not be the same amount due shown on your last bill statement because of recent payments received, pending payments or adjustments. <strong>Pending Payment will not reflect scheduled ePay auto payments.</strong></small></p>
                   </div>
-
-                  <p class="font-italic mx-4"><small><strong>Please note: Current Balance</strong> reflects the amount due as of today's date and may not be the same amount due shown on your last bill statement because of recent payments received, pending payments or adjustments. <strong>Pending Payment will not reflect scheduled ePay auto payments.</strong></small></p>
 
                 </div>
               </div>
@@ -108,47 +111,50 @@
 
                   <div class="d-md-flex pt-4 px-4">
                       <h2>My Services</h2>
+                      <button class="btn btn-secondary buttonCollapse ml-2 mb-0 mt-2" type="button" data-toggle="collapse" data-target="#multiCollapseMyServices" aria-expanded="true" aria-controls="multiCollapseMyServices">-</button>
                       <a href="services.html" class="button btn btn-primary ml-auto mb-4" role="button">Manage My Services</a>
                   </div>
 
-                  <div class="card-deck mx-3 mx-md-0">
+                  <div class="collapse show multi-collapse" id="multiCollapseMyServices">
+                    <div class="card-deck mx-3 mx-md-0">
 
-                    <div class="card ml-md-4 text-center">
-                      <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">Internet</h3></div>
+                      <div class="card ml-md-4 text-center">
+                        <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">Internet</h3></div>
 
-                      <div class="card-body">
-                        <ul class="list-group list-group-flush list-unstyled pl-0">
-                          <li class="list-group-item pl-0 pt-0 custom-list-group-item">Extreme600 Fiber Internet</li>
-                          <li class="list-group-item pl-0 custom-list-group-item">TDS Internet Security - Employee</li>
-                          <li class="list-group-item pl-0 custom-list-group-item">TDS Internet Security - Employee</li>
-                          <li class="list-group-item pl-0 custom-list-group-item"><a href="https://tdstelecom.com/shop/packages/internet.html">View All</a></li>
-                        </ul>
+                        <div class="card-body">
+                          <ul class="list-group list-group-flush list-unstyled pl-0">
+                            <li class="list-group-item pl-0 pt-0 custom-list-group-item">Extreme600 Fiber Internet</li>
+                            <li class="list-group-item pl-0 custom-list-group-item">TDS Internet Security - Employee</li>
+                            <li class="list-group-item pl-0 custom-list-group-item">TDS Internet Security - Employee</li>
+                            <li class="list-group-item pl-0 custom-list-group-item"><a href="https://tdstelecom.com/shop/packages/internet.html">View All</a></li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="card text-center">
-                      <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">TV</h3></div>
+                      <div class="card text-center">
+                        <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">TV</h3></div>
 
-                      <div class="card-body">
-                        <ul class="list-group list-group-flush list-unstyled pl-0">
-                          <li class="list-group-item pl-0 pt-0 custom-list-group-item">High Definition (HD)</li>
-                          <li class="list-group-item pl-0 custom-list-group-item">TDS TV Expanded Programming</li>
-                          <li class="list-group-item pl-0 custom-list-group-item">6 High Definition - 2 Standard Definition Streams</li>
-                          <li class="list-group-item pl-0 custom-list-group-item"><a href="https://tdstelecom.com/shop/packages/tv.html">View All</a></li>
-                        </ul>
+                        <div class="card-body">
+                          <ul class="list-group list-group-flush list-unstyled pl-0">
+                            <li class="list-group-item pl-0 pt-0 custom-list-group-item">High Definition (HD)</li>
+                            <li class="list-group-item pl-0 custom-list-group-item">TDS TV Expanded Programming</li>
+                            <li class="list-group-item pl-0 custom-list-group-item">6 High Definition - 2 Standard Definition Streams</li>
+                            <li class="list-group-item pl-0 custom-list-group-item"><a href="https://tdstelecom.com/shop/packages/tv.html">View All</a></li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="card mr-md-4 text-center">
-                      <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">Phone</h3></div>
+                      <div class="card mr-md-4 text-center">
+                        <div class="card-title mx-3 mt-3 mb-0"><h3 class="mb-0">Phone</h3></div>
 
-                      <div class="card-body">
-                        <ul class="list-group list-group-flush list-unstyled pl-0">
-                          <li class="list-group-item pl-0 custom-list-group-item"><a href="https://tdstelecom.com/shop/packages/phone.html">Shop For Affordable Calling Plans</a></li>
-                        </ul>
+                        <div class="card-body">
+                          <ul class="list-group list-group-flush list-unstyled pl-0">
+                            <li class="list-group-item pl-0 custom-list-group-item"><a href="https://tdstelecom.com/shop/packages/phone.html">Shop For Affordable Calling Plans</a></li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
 
+                    </div>
                   </div>
 
                 </div>
@@ -158,35 +164,41 @@
               <!-- account info plugin -->
               <div class="row">
                 <div class="w-100 bg-lt-gray mt-4">
-                  <h2 class="pt-4 px-4">My Account Information</h2>
 
-                  <div class="card-deck mx-3 mx-md-0">
-
-                    <div class="card ml-md-4">
-                      <div class="card-title text-center mx-3 mt-3 mb-0"><h3 class="mb-0">Billing Information</h3></div>
-
-                      <div class="card-body">
-                        <p>Customer Billing Name:</p>
-                        <p class="ml-3"><strong>John Doe</strong></p>
-                        <p>Customer Address:</p>
-                        <p class="ml-3"><strong>P.O. Box 1234<br>Madison, WI 53705</strong></p>
-                      </div>
-                    </div>
-
-                    <div class="card mr-md-4">
-                      <div class="card-title text-center mx-3 mt-3 mb-0"><h3 class="mb-0">Service Information</h3></div>
-
-                      <div class="card-body">
-                        <p>Service Address:</p>
-                        <p class="ml-3"><strong>123 Main St.<br>Madison, WI 53705</strong></p>
-                        <p>Account Number:</p>
-                        <p class="ml-3"><strong>123-456-7890</strong></p>
-                      </div>
-                    </div>
-
+                  <div class="d-md-flex pt-4 px-4">
+                    <h2>My Account Information</h2>
+                    <button class="btn btn-secondary buttonCollapse ml-2 mb-0 mt-2" type="button" data-toggle="collapse" data-target="#multiCollapseAcctInfo" aria-expanded="true" aria-controls="multiCollapseAcctInfo">-</button>
                   </div>
 
-                  <p class="font-italic mx-4"><small><strong>Please note:</strong> to change your billing or service information, you must speak with a TDS customer service advisor.</small></p>
+                  <div class="collapse show multi-collapse" id="multiCollapseAcctInfo">
+                    <div class="card-deck mx-3 mx-md-0">
+
+                      <div class="card ml-md-4">
+                        <div class="card-title text-center mx-3 mt-3 mb-0"><h3 class="mb-0">Billing Information</h3></div>
+
+                        <div class="card-body">
+                          <p>Customer Billing Name:</p>
+                          <p class="ml-3"><strong>John Doe</strong></p>
+                          <p>Customer Address:</p>
+                          <p class="ml-3"><strong>P.O. Box 1234<br>Madison, WI 53705</strong></p>
+                        </div>
+                      </div>
+
+                      <div class="card mr-md-4">
+                        <div class="card-title text-center mx-3 mt-3 mb-0"><h3 class="mb-0">Service Information</h3></div>
+
+                        <div class="card-body">
+                          <p>Service Address:</p>
+                          <p class="ml-3"><strong>123 Main St.<br>Madison, WI 53705</strong></p>
+                          <p>Account Number:</p>
+                          <p class="ml-3"><strong>123-456-7890</strong></p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <p class="font-italic mx-4"><small><strong>Please note:</strong> to change your billing or service information, you must speak with a TDS customer service advisor.</small></p>
+                  </div>
 
                 </div>
               </div>
@@ -194,53 +206,60 @@
 
               <!-- contact info plugin -->
               <div class="row">
-                <div class="w-100 bg-lt-gray mt-4">
+                <div class="w-100 bg-lt-gray mt-4 px-4">
 
-                  <div class="d-md-flex pt-4 px-4">
+                  <div class="d-md-flex pt-4">
                       <h2>My Contact Information</h2>
+                      <button class="btn btn-secondary buttonCollapse ml-2 mb-0 mt-2" type="button" data-toggle="collapse" data-target="#multiCollapseContactInfo" aria-expanded="true" aria-controls="multiCollapseContactInfo">-</button>
                       <a href="contact-preferences.html" class="button btn btn-primary ml-auto mb-4" role="button">Manage My Contact Preferences</a>
                   </div>
 
-                  <div class="card-deck mx-3 mx-md-0">
+                  <div class="collapse show multi-collapse" id="multiCollapseContactInfo">
+                    <div class="card-deck mx-md-0">
 
-                    <div class="card ml-md-4">
-                      <div class="card-title text-center mx-3 mt-3 mb-0"><h3 class="mb-0">Email Contacts</h3></div>
+                      <div class="card ml-md-0">
+                        <div class="card-title text-center mx-3 mt-3 mb-0"><h3 class="mb-0">Email Contacts</h3></div>
 
-                      <div class="card-body">
-                        <p>Primary Email:</p>
-                        <p class="ml-3"><strong>longlivetheking@gmail.com</strong></p>
-                        <p>Alternate Email:</p>
-                        <p class="ml-3"><strong>john.doe@tds.net</strong></p>
+                        <div class="card-body">
+                          <p>Primary Email:</p>
+                          <p class="ml-3"><strong>longlivetheking@gmail.com</strong></p>
+                          <p>Alternate Email:</p>
+                          <p class="ml-3"><strong>john.doe@tds.net</strong></p>
+                        </div>
                       </div>
+
+                      <div class="card mr-md-0">
+                        <div class="card-title text-center mx-3 mt-3 mb-0"><h3 class="mb-0">Phone Contacts</h3></div>
+
+                        <div class="card-body">
+                          <p>Primary Phone:</p>
+                          <p class="ml-3"><strong>608-489-4534</strong></p>
+                          <p>Alternate Phone:</p>
+                          <p class="ml-3"><strong>123-456-7890</strong></p>
+                        </div>
+                      </div>
+
                     </div>
 
-                    <div class="card mr-md-4">
-                      <div class="card-title text-center mx-3 mt-3 mb-0"><h3 class="mb-0">Phone Contacts</h3></div>
-
-                      <div class="card-body">
-                        <p>Primary Phone:</p>
-                        <p class="ml-3"><strong>608-489-4534</strong></p>
-                        <p>Alternate Phone:</p>
-                        <p class="ml-3"><strong>123-456-7890</strong></p>
-                      </div>
-                    </div>
-
+                    <p class="font-italic mx-4"><small><a href="contact-preferences.html">Additional account contacts</a> are listed in the Contact Preferences section.</small></p>
                   </div>
 
-                  <p class="font-italic mx-4"><small><a href="contact-preferences.html">Additional account contacts</a> are listed in the Contact Preferences section.</small></p>
+                  <div class="alert alert-info collapse multi-collapse" role="alert">
+                    <p>Your email and phone contact information is missing.<a href="contact-preferences.html">Add your contact information</a>in the Contact Preferences section.</p>
+                  </div>
 
                 </div>
               </div>
               <!-- END contact info plugin -->
 
               <!-- collapsed contact info plugin -->
-              <div class="row bg-lt-gray mt-4 pt-4 px-4">
+              <!-- <div class="row bg-lt-gray mt-4 pt-4 px-4">
                 <h2>My Contact Information</h2>
 
                   <div class="alert alert-info" role="alert">
                     <p>Your email and phone contact information is missing.<a href="contact-preferences.html">Add your contact information</a>in the Contact Preferences section.</p>
                   </div>
-              </div>
+              </div> -->
               <!-- END collapsed contact info plugin -->
 
             </div>
