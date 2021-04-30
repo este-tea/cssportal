@@ -60,6 +60,130 @@
                 <p>For instructions on how to add devices, visit the<a href="#">Personal Device Overview</a>support page.</p>
               </div>
 
+              <!-- if users have devices added -->
+              <div class="row">
+                  <table class="table tds-responsive-table bg-white" role="grid">
+                    <thead>
+                      <tr>
+                        <th>Device Name</th>
+                        <th>Device Type</th>
+                        <th>Manufacturer</th>
+                        <th>Model</th>
+                        <th>Date Last Used</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td data-label="Name">
+                          <div class="name">Akhil\u2019s iPhone</div>
+                        </td>
+
+                        <td class="text-center" data-label="type">
+                          <div class="type">iPhone</div>
+                        </td>
+
+                        <td class="text-center" data-label="Manufacturer">
+                          <div class="manufacturer">Apple</div>
+                        </td>
+
+                        <td class="text-center" data-label="Model">
+                          <div class="model">iPhone11,8</div>
+                        </td>
+
+                        <td class="text-center" data-label="date">
+                          <div class="date">02/08/2021 04:20 PM UTC</div>
+                        </td>
+
+                        <td>
+                          <button class="btn btn-primary tds-icon icon-x-left float-right" data-toggle="modal" data-target="#removeModal">Remove</button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="name">Sudha\u2019s phone</div>
+                        </td>
+
+                        <td class="text-center" data-label="type">
+                          <div class="type">iPhone</div>
+                        </td>
+
+                        <td class="text-center" data-label="Manufacturer">
+                          <div class="manufacturer">Apple</div>
+                        </td>
+
+                        <td class="text-center" data-label="Model">
+                          <div class="model">iPhone11,2</div>
+                        </td>
+
+                        <td class="text-center" data-label="date">
+                          <div class="date">02/08/2021 04:34 PM UTC</div>
+                        </td>
+
+                        <td>
+                          <button class="btn btn-primary tds-icon icon-x-left float-right" data-toggle="modal" data-target="#removeModal">Remove</button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="name">Aparna's Fire TV</div>
+                        </td>
+
+                        <td class="text-center" data-label="type">
+                          <div class="type">fireTV</div>
+                        </td>
+
+                        <td class="text-center" data-label="Manufacturer">
+                          <div class="manufacturer">Amazon</div>
+                        </td>
+
+                        <td class="text-center" data-label="Model">
+                          <div class="model">AFTMM</div>
+                        </td>
+
+                        <td class="text-center" data-label="date">
+                          <div class="date">02/09/2021 02:08 AM UTC</div>
+                        </td>
+
+                        <td>
+                          <button class="btn btn-primary tds-icon icon-x-left float-right" data-toggle="modal" data-target="#removeModal">Remove</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+
+              <!-- remove modal -->
+              <section id="removeModal" class="modal fade confirmationModal delete" role="dialog">
+                <div class="modal-dialog tds-modal">
+
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <p class="modal-title h2">Are you sure you want to remove this device?</p>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close Modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body text-center">
+                      <p>Device Name: <b>AKHIL\U2019S IPHONE</b></p>
+                      <p>Manufacturer: <b>Apple</b></p>
+                      <p>Model: <b>iPhone11,8</b></p>
+                      <p>Date Last Used: <b>02/08/2021 04:20 PM UTC</b></p>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary primary-cta" data-dismiss="modal">Remove Device</button>
+                      <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+              <!-- END remove modal -->
+              <!-- END if users have devices added -->
+
               <!-- cards plugin -->
               <div class="row">
                 <div class="w-100">
