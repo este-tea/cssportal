@@ -8451,6 +8451,12 @@ a strong {
   padding: 0;
 }
 
+/* @media (min-width: 576px) {
+  .button-link {
+    display: inline-flex;
+  }
+} */
+
 /* END buttons-links.scss */
 /* tds-icons
 ==========================================*/
